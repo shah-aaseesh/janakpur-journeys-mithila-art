@@ -9,6 +9,7 @@ const Header: React.FC = () => {
   const menuItems = [
     { name: "Home", href: "#hero" },
     { name: "About", href: "#about" },
+    { name: "Services", href: "#services" },
     { name: "Gallery", href: "#gallery" },
     { name: "Testimonials", href: "#testimonials" },
     { name: "Contact", href: "#contact" },

@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -35,19 +39,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -96,6 +93,29 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-mithila-cream text-foreground font-poppins scroll-smooth;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-center mb-10 font-hind relative;
+    &::after {
+      content: "";
+      @apply absolute w-16 h-1 bg-mithila-red left-1/2 transform -translate-x-1/2 bottom-0 mt-2;
+    }
+  }
+
+  .mithila-border {
+    @apply relative;
+    &::before {
+      content: "";
+      @apply absolute top-0 left-0 w-full h-4 bg-repeat-x;
+      background-image: url("data:image/svg+xml,%3Csvg width='80' height='8' viewBox='0 0 80 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h10v2H0V0zm10 4h10v2H10V4zm10-4h10v2H20V0zm10 4h10v2H30V4zm10-4h10v2H40V0zm10 4h10v2H50V4zm10-4h10v2H60V0zm10 4h10v2H70V4z' fill='%23E63946' fill-opacity='0.7' fill-rule='evenodd'/%3E%3C/svg%3E");
+    }
   }
 }

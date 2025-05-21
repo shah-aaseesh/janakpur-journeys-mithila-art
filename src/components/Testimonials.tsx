@@ -7,10 +7,11 @@ interface Testimonial {
   origin: string;
   comment: string;
   rating: number;
+  image: string;
 }
 
 const Testimonials: React.FC = () => {
-  // Sample testimonial data
+  // Testimonial data with images
   const testimonials: Testimonial[] = [
     {
       id: 1,
@@ -18,6 +19,7 @@ const Testimonials: React.FC = () => {
       origin: "USA",
       comment: "Bikash made our trip to Janakpur truly special. His knowledge of local history and culture is impressive, and he took us to places we would never have found on our own. Highly recommended!",
       rating: 5,
+      image: "/lovable-uploads/e05bc06e-806d-45e2-9af9-9b36309ca9fa.png",
     },
     {
       id: 2,
@@ -25,6 +27,7 @@ const Testimonials: React.FC = () => {
       origin: "India",
       comment: "As someone interested in the shared cultural heritage between India and Nepal, I found Bikash's insights fascinating. His fluency in multiple languages made communication effortless.",
       rating: 5,
+      image: "/lovable-uploads/ede64044-592e-486b-b2e6-6631a97587aa.png",
     },
     {
       id: 3,
@@ -32,6 +35,7 @@ const Testimonials: React.FC = () => {
       origin: "UK",
       comment: "Our day tour with Bikash was the highlight of our Nepal trip. He's friendly, knowledgeable, and adapted the tour to match our interests. The Mithila art experience he arranged was unforgettable.",
       rating: 5,
+      image: "/lovable-uploads/04510e57-4d7b-44fb-8118-bbbc88b69dee.png",
     },
     {
       id: 4,
@@ -39,6 +43,7 @@ const Testimonials: React.FC = () => {
       origin: "Japan",
       comment: "Bikash is an excellent guide who understands the needs of international travelers. His tours offer a perfect balance of historical information, cultural experiences, and beautiful sights.",
       rating: 4,
+      image: "/lovable-uploads/7cbb66ce-ac24-4462-bf03-efb8b7a488ce.png",
     },
   ];
 
@@ -79,8 +84,12 @@ const Testimonials: React.FC = () => {
               </div>
               <p className="text-gray-700 mb-6 italic">"{testimonial.comment}"</p>
               <div className="flex items-center">
-                <div className="w-10 h-10 bg-mithila-indigo rounded-full flex items-center justify-center text-white font-bold">
-                  {testimonial.name[0]}
+                <div className="w-12 h-12 bg-mithila-indigo rounded-full flex items-center justify-center text-white font-bold overflow-hidden">
+                  <img 
+                    src={testimonial.image} 
+                    alt={`${testimonial.name}'s experience with Bikash Sah`}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="ml-3">
                   <p className="font-bold text-mithila-indigo">{testimonial.name}</p>

@@ -56,13 +56,13 @@ const Hero: React.FC = () => {
 
           <div className="w-full md:w-1/2 flex justify-center md:justify-end animate-fade-in">
             <div className="relative">
-              {/* Placeholder for Bikash's image */}
+              {/* Bikash's profile image */}
               <div className="w-64 h-64 md:w-80 md:h-80 bg-mithila-cream rounded-full overflow-hidden border-4 border-mithila-yellow shadow-lg">
-                <div className="w-full h-full bg-gray-300 flex items-center justify-center text-gray-500">
-                  <svg className="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-                  </svg>
-                </div>
+                <img 
+                  src="/lovable-uploads/40763db9-e34d-402b-bb87-a8339b956e0f.png" 
+                  alt="Bikash Sah - Tour Guide" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               {/* Decorative elements */}
               <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-mithila-yellow rounded-full -z-10"></div>

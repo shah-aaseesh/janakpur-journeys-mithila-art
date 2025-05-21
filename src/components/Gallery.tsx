@@ -3,19 +3,19 @@ import React, { useState } from "react";
 
 interface GalleryImage {
   id: number;
-  src: string; // Using placeholder for now
+  src: string;
   alt: string;
 }
 
 const Gallery: React.FC = () => {
-  // Sample gallery data - would normally be loaded from a CMS or API
+  // Gallery data with actual images
   const images: GalleryImage[] = [
-    { id: 1, src: "https://source.unsplash.com/random/600x400?temple", alt: "Janaki Temple" },
-    { id: 2, src: "https://source.unsplash.com/random/600x400?nepal", alt: "Local Festival" },
-    { id: 3, src: "https://source.unsplash.com/random/600x400?art", alt: "Mithila Art" },
-    { id: 4, src: "https://source.unsplash.com/random/600x400?culture", alt: "Cultural Performance" },
-    { id: 5, src: "https://source.unsplash.com/random/600x400?food", alt: "Local Cuisine" },
-    { id: 6, src: "https://source.unsplash.com/random/600x400?market", alt: "Local Market" },
+    { id: 1, src: "/lovable-uploads/52e48ffb-7599-4f4c-884d-50b6ade18132.png", alt: "Bikash with tourists at Janaki Temple" },
+    { id: 2, src: "/lovable-uploads/89c7ca21-a009-4814-a1d6-4daeea2fe680.png", alt: "Bikash with a tourist at the airport" },
+    { id: 3, src: "/lovable-uploads/6071cb9c-3437-4347-aef0-0ac050038b55.png", alt: "Bikash at a countryside retreat" },
+    { id: 4, src: "/lovable-uploads/0121843a-6e6c-4d16-bc0e-9a57c2d7071c.png", alt: "Guided tour group at a local site" },
+    { id: 5, src: "/lovable-uploads/eced69e9-1a8f-4213-b186-3712efdf8bb1.png", alt: "Temple architecture in Janakpur" },
+    { id: 6, src: "/lovable-uploads/27398195-fcb1-4c22-8586-9333a28a33c0.png", alt: "Janaki Temple illuminated at night" },
   ];
 
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -65,7 +65,7 @@ const Gallery: React.FC = () => {
                 <img 
                   src={image.src} 
                   alt={image.alt}
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" 
+                  className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500" 
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">

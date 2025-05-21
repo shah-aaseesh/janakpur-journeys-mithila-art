@@ -1,4 +1,3 @@
-
 import React from "react";
 
 interface Testimonial {
@@ -65,6 +64,10 @@ const Testimonials: React.FC = () => {
       ));
   };
 
+  const handleBookTourClick = () => {
+    window.open("https://wa.me/9779815835343", "_blank");
+  };
+
   return (
     <section id="testimonials" className="py-20 bg-white">
       <div className="container mx-auto px-6">
@@ -101,18 +104,12 @@ const Testimonials: React.FC = () => {
         </div>
 
         <div className="mt-12 text-center">
-          <a 
-            href="#contact"
+          <button 
             className="inline-block px-6 py-3 bg-mithila-green text-white rounded-md font-medium hover:bg-opacity-90 transition-all transform hover:-translate-y-1"
-            onClick={(e) => {
-              e.preventDefault();
-              document.querySelector("#contact")?.scrollIntoView({
-                behavior: "smooth",
-              });
-            }}
+            onClick={handleBookTourClick}
           >
             Book Your Tour Now
-          </a>
+          </button>
         </div>
       </div>
     </section>

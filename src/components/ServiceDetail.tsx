@@ -131,11 +131,6 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({
                             {pkg.itinerary.map((item, idx) => (
                               <div key={idx} className="border-l-4 border-mithila-red pl-4">
                                 <div className="flex items-start mb-2">
-                                  {item.time && (
-                                    <Badge variant="outline" className="bg-mithila-cream text-mithila-red border-mithila-red mr-3 flex-shrink-0">
-                                      {item.time}
-                                    </Badge>
-                                  )}
                                   <div>
                                     <h5 className="font-semibold text-mithila-indigo">{item.activity}</h5>
                                     <p className="text-gray-700 text-sm mt-1">{item.description}</p>
@@ -218,7 +213,7 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({
                     <CardTitle className="text-mithila-indigo">🔖 Add-On Services</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <ul className="space-y-3">
                       {addOnServices.map((service, index) => (
                         <li key={index} className="flex items-start">
                           <div className="w-2 h-2 bg-mithila-yellow rounded-full mt-2 mr-3 flex-shrink-0"></div>

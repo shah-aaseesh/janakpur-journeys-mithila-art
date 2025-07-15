@@ -29,6 +29,7 @@ const Header: React.FC = () => {
   }, []);
 
   const isDetailPage = location.pathname.startsWith('/services/');
+  const isHomePage = location.pathname === '/';
 
   const handleMenuClick = (href: string) => {
     if (href === "/") {
@@ -53,9 +54,11 @@ const Header: React.FC = () => {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4",
-        isScrolled || isDetailPage
+        (isScrolled || isDetailPage)
           ? "bg-white shadow-md"
-          : "bg-transparent"
+          : isHomePage 
+            ? "bg-black/20 backdrop-blur-sm"
+            : "bg-white shadow-md"
       )}
     >
       <div className="container mx-auto flex justify-between items-center">
@@ -63,7 +66,7 @@ const Header: React.FC = () => {
           to="/" 
           className={cn(
             "text-xl font-bold transition-colors",
-            isScrolled || isDetailPage
+            (isScrolled || isDetailPage || !isHomePage)
               ? "text-mithila-indigo hover:text-mithila-red"
               : "text-white hover:text-mithila-cream"
           )}
@@ -81,7 +84,7 @@ const Header: React.FC = () => {
                     to={item.href}
                     className={cn(
                       "font-medium transition-colors",
-                      isScrolled || isDetailPage
+                      (isScrolled || isDetailPage || !isHomePage)
                         ? "text-mithila-indigo hover:text-mithila-red"
                         : "text-white hover:text-mithila-cream"
                     )}
@@ -93,7 +96,7 @@ const Header: React.FC = () => {
                     href={item.href}
                     className={cn(
                       "font-medium transition-colors cursor-pointer",
-                      isScrolled || isDetailPage
+                      (isScrolled || isDetailPage || !isHomePage)
                         ? "text-mithila-indigo hover:text-mithila-red"
                         : "text-white hover:text-mithila-cream"
                     )}
@@ -123,7 +126,9 @@ const Header: React.FC = () => {
             stroke="currentColor"
             className={cn(
               "w-6 h-6",
-              isScrolled || isDetailPage ? "text-mithila-indigo" : "text-white"
+              (isScrolled || isDetailPage || !isHomePage) 
+                ? "text-mithila-indigo" 
+                : "text-white"
             )}
           >
             {mobileMenuOpen ? (

@@ -130,13 +130,17 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({
                           <div className="space-y-4">
                             {pkg.itinerary.map((item, idx) => (
                               <div key={idx} className="border-l-4 border-mithila-red pl-4">
-                                <div className="flex items-center mb-2">
-                                  <Badge variant="outline" className="bg-mithila-cream text-mithila-red border-mithila-red mr-3">
-                                    {item.time}
-                                  </Badge>
-                                  <h5 className="font-semibold text-mithila-indigo">{item.activity}</h5>
+                                <div className="flex items-start mb-2">
+                                  {item.time && (
+                                    <Badge variant="outline" className="bg-mithila-cream text-mithila-red border-mithila-red mr-3 flex-shrink-0">
+                                      {item.time}
+                                    </Badge>
+                                  )}
+                                  <div>
+                                    <h5 className="font-semibold text-mithila-indigo">{item.activity}</h5>
+                                    <p className="text-gray-700 text-sm mt-1">{item.description}</p>
+                                  </div>
                                 </div>
-                                <p className="text-gray-700 text-sm">{item.description}</p>
                               </div>
                             ))}
                           </div>

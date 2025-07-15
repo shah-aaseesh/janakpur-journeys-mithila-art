@@ -10,78 +10,72 @@ const CityToursDetail = () => {
   const serviceData = {
     title: "Janakpurdham City Tour Package",
     description: "Explore the sacred city of Janakpur with comprehensive tour packages covering major spiritual and heritage sites.",
-    longDescription: "Discover the heart of Mithila culture and Hindu spirituality in Janakpur, the birthplace of Goddess Sita. Our expertly crafted tour packages offer you the opportunity to explore over 18 sacred sites, from the magnificent Janaki Mandir to hidden gems like Ratna Sagar and Mani Mandap. Whether you choose our Full Day City Tour or the comprehensive Heritage & Spiritual Trail, you'll experience authentic Mithila culture, traditional cuisine, and spiritual enlightenment guided by our knowledgeable local experts.",
+    longDescription: "Discover the heart of Mithila culture and Hindu spirituality in Janakpur, the birthplace of Goddess Sita. Our expertly crafted tour packages offer you the opportunity to explore sacred sites, experience authentic Mithila culture, traditional cuisine, and spiritual enlightenment guided by our knowledgeable local experts.",
     packageOptions: [
       {
         name: "Full Day City Tour",
-        duration: "1 Day (7-9 hours)",
+        duration: "7–9 hours",
         coverage: "10 major sites",
         idealFor: "Pilgrims, cultural explorers, art lovers",
         price: "Starting from NPR 2,500 per person (for group of 4 or more)",
         itinerary: [
           {
-            time: "9:00 AM",
+            time: "",
             activity: "Janaki Mandir",
-            description: "Grand temple dedicated to Goddess Sita - marvel at the architectural beauty and participate in morning prayers"
+            description: "Grand temple dedicated to Goddess Sita"
           },
           {
-            time: "10:00 AM", 
+            time: "",
             activity: "Ram Mandir",
-            description: "Historic temple resembling Pashupatinath - experience the spiritual ambiance and ancient architecture"
+            description: "Historic temple resembling Pashupatinath"
           },
           {
-            time: "10:30 AM",
+            time: "",
             activity: "Janak Mandir",
-            description: "Temple of King Janak - learn about the legendary king and his significance in Hindu mythology"
+            description: "Temple of King Janak"
           },
           {
-            time: "11:15 AM",
+            time: "",
             activity: "Ram-Janaki Bibaha Mandap",
-            description: "Celebrates the divine wedding - witness the exact spot where Lord Rama and Sita were married"
+            description: "Celebrates the divine wedding"
           },
           {
-            time: "12:00 PM",
+            time: "",
             activity: "Lakshman Mandir",
-            description: "Inside Janaki complex - dedicated to Lord Rama's devoted brother"
+            description: "Inside Janaki complex"
           },
           {
-            time: "12:30 PM",
-            activity: "Traditional Mithila Thali Lunch",
-            description: "Authentic local cuisine experience with traditional Mithila flavors"
-          },
-          {
-            time: "2:00 PM",
+            time: "",
             activity: "Rajdevi Mandir",
-            description: "Lineage deity of King Janak - explore the royal heritage and family traditions"
+            description: "Lineage deity of King Janak"
           },
           {
-            time: "2:45 PM",
+            time: "",
             activity: "Sankat Mochan Hanuman Mandir",
-            description: "Hanuman's shrine with Ramcharitmanas verses - spiritual chanting and prayers"
+            description: "Hanuman's shrine with Ramcharitmanas verses"
           },
           {
-            time: "3:30 PM",
+            time: "",
             activity: "Barhabigha/Rangabhoomi",
-            description: "Site of annual Bibaha Panchami fair - learn about the grand celebration traditions"
+            description: "Site of annual Bibaha Panchami fair"
           },
           {
-            time: "4:30 PM",
+            time: "",
             activity: "Ganga Sagar Pond",
-            description: "Sacred site with daily Ganga Aarti - participate in the evening spiritual ceremony"
+            description: "Sacred site with daily Ganga Aarti"
           },
           {
-            time: "5:30 PM",
+            time: "",
             activity: "Dhanush Sagar",
-            description: "Linked to Shiva Dhanush legend - conclude with the mystical bow-breaking story"
+            description: "Linked to Shiva Dhanush legend"
           }
         ],
         includes: [
-          "Mithila-style welcome ceremony",
+          "Mithila-style welcome",
           "Rickshaw ride around temple routes",
           "Traditional Mithila Thali Lunch",
           "Evening Ganga Aarti Experience",
-          "English/Hindi/Maithili-speaking guide",
-          "Entry tickets to all temples"
+          "English/Hindi/Maithili-speaking guide"
         ]
       },
       {
@@ -89,44 +83,37 @@ const CityToursDetail = () => {
         duration: "2 Days / 1 Night",
         coverage: "18+ spiritual and heritage sites",
         idealFor: "Cultural pilgrims, researchers, honeymooners",
-        price: "Starting from NPR 7,500 per person (Includes stay, food, transport & guide - discounts for groups)",
+        price: "Starting from NPR 7,500 per person (Includes stay, food, transport & guide – discounts for groups)",
         itinerary: [
           {
             time: "Day 1",
             activity: "Janakpur Highlights",
-            description: "All 10 sites from Full Day Tour plus: Angarag Sar (Sita's pre-wedding bath site), Agni Kund (King Janak's yajna site), Ratna Sagar (legendary treasury pond), Mani Mandap (actual wedding ground), Evening Cultural Performance"
-          },
-          {
-            time: "Evening",
-            activity: "Cultural Village Stay",
-            description: "Authentic village experience with dinner and local folklore session"
+            description: "All 10 sites from the Full Day Tour, Angarag Sar – Sita's pre-wedding bath site, Agni Kund – Site of King Janak's yajna, Ratna Sagar – Legendary treasury pond, Mani Mandap – Actual wedding ground of Ram & Sita, Evening Cultural Performance (Optional), Stay: Cultural Village with dinner & local folklore session"
           },
           {
             time: "Day 2",
-            activity: "Around Janakpur Exploration",
-            description: "Nocha Pokhari, Kapileshwar Mahadev Mandir, Mithila Bihari Mandir, Dhanushadham & Dhanush Mandir, Parashuram Talau, Local souvenir shopping (Mithila paintings, paan, makhana)"
+            activity: "Around Janakpur",
+            description: "Nocha Pokhari – Historic pond in Rampur, Kapileshwar Mahadev Mandir – Sage Kapil's shrine, Mithila Bihari Mandir – Start of Parikrama tradition, Dhanushadham & Dhanush Mandir – Shiva bow legend, Parashuram Talau – Penance site of Rishi Parashuram, Local souvenir shopping (Mithila paintings, paan, makhana)"
           }
         ],
         includes: [
           "Breakfast, Lunch and Dinner (Mithila Cuisine)",
           "A/C vehicle with local guide",
           "Entry tickets to temples & museum",
-          "Cultural storytelling session",
-          "Cultural village accommodation",
-          "Traditional folklore evening"
+          "Cultural storytelling session"
         ]
       }
     ],
     addOnServices: [
-      "Hotel upgrade to premium stay",
-      "Cultural photoshoot in Mithila attire", 
-      "Janakpur–Jayanagar Train Ride",
-      "Mithila Painting Workshop",
-      "Spiritual session with local Sadhu or priest",
-      "Mithila souvenir collection"
+      "🛏️ Hotel upgrade to premium stay",
+      "📸 Cultural photoshoot in Mithila attire", 
+      "🚂 Janakpur–Jayanagar Train Ride",
+      "🎨 Mithila Painting Workshop",
+      "🧘‍♂️ Spiritual session with local Sadhu or priest",
+      "Mithila souvenir"
     ],
     highlights: [
-      "Visit 10-18+ sacred temples and heritage sites",
+      "Visit major temples and heritage sites",
       "Experience authentic Mithila culture and traditions",
       "Participate in daily Ganga Aarti ceremony",
       "Traditional Mithila Thali and local cuisine",

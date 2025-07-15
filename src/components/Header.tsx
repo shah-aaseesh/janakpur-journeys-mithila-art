@@ -1,18 +1,20 @@
 
 import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   const menuItems = [
-    { name: "Home", href: "#hero" },
-    { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Gallery", href: "#gallery" },
-    { name: "Testimonials", href: "#testimonials" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/#about" },
+    { name: "Services", href: "/#services" },
+    { name: "Gallery", href: "/#gallery" },
+    { name: "Testimonials", href: "/#testimonials" },
+    { name: "Contact", href: "/#contact" },
   ];
 
   useEffect(() => {
@@ -26,37 +28,83 @@ const Header: React.FC = () => {
     };
   }, []);
 
+  const isDetailPage = location.pathname.startsWith('/services/');
+
+  const handleMenuClick = (href: string) => {
+    if (href === "/") {
+      // Navigate to home
+      return;
+    } else if (href.startsWith("/#")) {
+      if (isDetailPage) {
+        // If on detail page, navigate to home with hash
+        window.location.href = href;
+      } else {
+        // If on home page, scroll to section
+        const sectionId = href.substring(2);
+        document.getElementById(sectionId)?.scrollIntoView({
+          behavior: "smooth",
+        });
+      }
+    }
+    setMobileMenuOpen(false);
+  };
+
   return (
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4",
-        isScrolled
-          ? "bg-white bg-opacity-95 shadow-md"
+        isScrolled || isDetailPage
+          ? "bg-white shadow-md"
           : "bg-transparent"
       )}
     >
       <div className="container mx-auto flex justify-between items-center">
-        <a href="#hero" className="text-xl font-bold text-mithila-indigo hover:text-mithila-red transition-colors">
+        <Link 
+          to="/" 
+          className={cn(
+            "text-xl font-bold transition-colors",
+            isScrolled || isDetailPage
+              ? "text-mithila-indigo hover:text-mithila-red"
+              : "text-white hover:text-mithila-cream"
+          )}
+        >
           Bikash Sah
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:block">
           <ul className="flex space-x-8">
             {menuItems.map((item) => (
               <li key={item.name}>
-                <a
-                  href={item.href}
-                  className="font-medium text-mithila-indigo hover:text-mithila-red transition-colors"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    document.querySelector(item.href)?.scrollIntoView({
-                      behavior: "smooth",
-                    });
-                  }}
-                >
-                  {item.name}
-                </a>
+                {item.href === "/" ? (
+                  <Link
+                    to={item.href}
+                    className={cn(
+                      "font-medium transition-colors",
+                      isScrolled || isDetailPage
+                        ? "text-mithila-indigo hover:text-mithila-red"
+                        : "text-white hover:text-mithila-cream"
+                    )}
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <a
+                    href={item.href}
+                    className={cn(
+                      "font-medium transition-colors cursor-pointer",
+                      isScrolled || isDetailPage
+                        ? "text-mithila-indigo hover:text-mithila-red"
+                        : "text-white hover:text-mithila-cream"
+                    )}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleMenuClick(item.href);
+                    }}
+                  >
+                    {item.name}
+                  </a>
+                )}
               </li>
             ))}
           </ul>
@@ -73,7 +121,10 @@ const Header: React.FC = () => {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="w-6 h-6 text-mithila-indigo"
+            className={cn(
+              "w-6 h-6",
+              isScrolled || isDetailPage ? "text-mithila-indigo" : "text-white"
+            )}
           >
             {mobileMenuOpen ? (
               <path
@@ -97,19 +148,26 @@ const Header: React.FC = () => {
             <ul className="flex flex-col space-y-4">
               {menuItems.map((item) => (
                 <li key={item.name}>
-                  <a
-                    href={item.href}
-                    className="block py-2 text-center font-medium text-mithila-indigo hover:text-mithila-red transition-colors"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      document.querySelector(item.href)?.scrollIntoView({
-                        behavior: "smooth",
-                      });
-                      setMobileMenuOpen(false);
-                    }}
-                  >
-                    {item.name}
-                  </a>
+                  {item.href === "/" ? (
+                    <Link
+                      to={item.href}
+                      className="block py-2 text-center font-medium text-mithila-indigo hover:text-mithila-red transition-colors"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  ) : (
+                    <a
+                      href={item.href}
+                      className="block py-2 text-center font-medium text-mithila-indigo hover:text-mithila-red transition-colors cursor-pointer"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleMenuClick(item.href);
+                      }}
+                    >
+                      {item.name}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>

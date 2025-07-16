@@ -197,11 +197,13 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({
                     <div className="space-y-6">
                       {itinerary.map((item, index) => (
                         <div key={index} className="border-l-4 border-mithila-red pl-6 pb-4">
-                          <div className="flex items-center mb-2">
-                            <Badge variant="outline" className="bg-mithila-cream text-mithila-red border-mithila-red">
-                              {item.time}
-                            </Badge>
-                          </div>
+                          {item.time && (
+                            <div className="flex items-center mb-2">
+                              <Badge variant="outline" className="bg-mithila-cream text-mithila-red border-mithila-red">
+                                {item.time}
+                              </Badge>
+                            </div>
+                          )}
                           <h4 className="font-semibold text-mithila-indigo mb-2">{item.activity}</h4>
                           <p className="text-gray-700">{item.description}</p>
                         </div>

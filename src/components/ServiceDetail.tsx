@@ -107,7 +107,7 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({
               </Card>
 
               {/* Package Options */}
-              {packageOptions && (
+              {packageOptions && packageOptions.length > 0 && (
                 <div className="space-y-6">
                   <h2 className="text-2xl font-bold text-mithila-indigo mb-4">📅 Package Options</h2>
                   {packageOptions.map((pkg, index) => (

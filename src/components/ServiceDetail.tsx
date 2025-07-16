@@ -239,7 +239,7 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({
                   <CardTitle className="text-mithila-indigo">Quick Booking</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  {pricing && (
+                  {pricing && !packageOptions && (
                     <>
                       <div className="p-4 bg-mithila-cream rounded-lg">
                         <div className="text-sm text-gray-600 mb-1">Individual</div>
@@ -252,7 +252,7 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({
                     </>
                   )}
 
-                  {packageOptions && (
+                  {packageOptions && packageOptions.length > 0 && (
                     <div className="space-y-3">
                       {packageOptions.map((pkg, index) => (
                         <div key={index} className="p-4 bg-mithila-cream rounded-lg">

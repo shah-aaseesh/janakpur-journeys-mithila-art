@@ -86,14 +86,79 @@ const CityToursDetail = () => {
         price: "Starting from NPR 7,500 per person (Includes stay, food, transport & guide – discounts for groups)",
         itinerary: [
           {
-            time: "Day 1",
-            activity: "Janakpur Highlights",
-            description: "All 10 sites from the Full Day Tour, Angarag Sar – Sita's pre-wedding bath site, Agni Kund – Site of King Janak's yajna, Ratna Sagar – Legendary treasury pond, Mani Mandap – Actual wedding ground of Ram & Sita, Evening Cultural Performance (Optional), Stay: Cultural Village with dinner & local folklore session"
+            time: "",
+            activity: "Day 1: Janakpur Highlights",
+            description: ""
           },
           {
-            time: "Day 2",
-            activity: "Around Janakpur",
-            description: "Nocha Pokhari – Historic pond in Rampur, Kapileshwar Mahadev Mandir – Sage Kapil's shrine, Mithila Bihari Mandir – Start of Parikrama tradition, Dhanushadham & Dhanush Mandir – Shiva bow legend, Parashuram Talau – Penance site of Rishi Parashuram, Local souvenir shopping (Mithila paintings, paan, makhana)"
+            time: "",
+            activity: "All 10 sites from the Full Day Tour",
+            description: ""
+          },
+          {
+            time: "",
+            activity: "Angarag Sar",
+            description: "Sita's pre-wedding bath site"
+          },
+          {
+            time: "",
+            activity: "Agni Kund",
+            description: "Site of King Janak's yajna"
+          },
+          {
+            time: "",
+            activity: "Ratna Sagar",
+            description: "Legendary treasury pond"
+          },
+          {
+            time: "",
+            activity: "Mani Mandap",
+            description: "Actual wedding ground of Ram & Sita"
+          },
+          {
+            time: "",
+            activity: "Evening Cultural Performance (Optional)",
+            description: ""
+          },
+          {
+            time: "",
+            activity: "Stay: Cultural Village with dinner & local folklore session",
+            description: ""
+          },
+          {
+            time: "",
+            activity: "Day 2: Around Janakpur",
+            description: ""
+          },
+          {
+            time: "",
+            activity: "Nocha Pokhari",
+            description: "Historic pond in Rampur"
+          },
+          {
+            time: "",
+            activity: "Kapileshwar Mahadev Mandir",
+            description: "Sage Kapil's shrine"
+          },
+          {
+            time: "",
+            activity: "Mithila Bihari Mandir",
+            description: "Start of Parikrama tradition"
+          },
+          {
+            time: "",
+            activity: "Dhanushadham & Dhanush Mandir",
+            description: "Shiva bow legend"
+          },
+          {
+            time: "",
+            activity: "Parashuram Talau",
+            description: "Penance site of Rishi Parashuram"
+          },
+          {
+            time: "",
+            activity: "Local souvenir shopping (Mithila paintings, paan, makhana)",
+            description: ""
           }
         ],
         includes: [

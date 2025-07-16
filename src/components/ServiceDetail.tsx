@@ -129,13 +129,18 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({
                           <h4 className="font-semibold text-mithila-indigo mb-3">🗺️ Itinerary:</h4>
                           <div className="space-y-4">
                             {pkg.itinerary.map((item, idx) => (
-                              <div key={idx} className="border-l-4 border-mithila-red pl-4">
-                                <div className="flex items-start mb-2">
-                                  <div>
-                                    <h5 className="font-semibold text-mithila-indigo">{item.activity}</h5>
-                                    <p className="text-gray-700 text-sm mt-1">{item.description}</p>
+                              <div key={idx}>
+                                {item.activity.startsWith('Day') ? (
+                                  <h5 className="font-bold text-mithila-indigo text-lg mb-2 mt-4">{item.activity}</h5>
+                                ) : (
+                                  <div className="flex items-start mb-2">
+                                    <div className="w-2 h-2 bg-mithila-red rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                    <div>
+                                      <span className="font-semibold text-mithila-indigo">{item.activity}</span>
+                                      {item.description && <span className="text-gray-700"> – {item.description}</span>}
+                                    </div>
                                   </div>
-                                </div>
+                                )}
                               </div>
                             ))}
                           </div>

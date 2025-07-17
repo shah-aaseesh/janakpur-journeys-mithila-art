@@ -22,7 +22,7 @@ const MithilaCulturalToursDetail = () => {
     ],
     packageOptions: [
       {
-        name: "Half Day Cultural Glimpse",
+        name: "Half Day Glimpse",
         duration: "4 hours",
         coverage: "Essential Mithila highlights",
         idealFor: "Quick cultural overview",
@@ -42,7 +42,7 @@ const MithilaCulturalToursDetail = () => {
         ]
       },
       {
-        name: "Full Day Cultural Immersion",
+        name: "Full Day Immersion",
         duration: "8 hours", 
         coverage: "Complete Mithila experience",
         idealFor: "Art lovers, cultural enthusiasts",
@@ -68,7 +68,7 @@ const MithilaCulturalToursDetail = () => {
         ]
       },
       {
-        name: "2 Days / 1 Night Cultural Retreat",
+        name: "2 Days / 1 Night",
         duration: "2D/1N",
         coverage: "Deep cultural immersion",
         idealFor: "Students, researchers, documentary makers",

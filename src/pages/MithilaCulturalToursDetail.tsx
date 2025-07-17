@@ -23,7 +23,7 @@ const MithilaCulturalToursDetail = () => {
     packageOptions: [
       {
         name: "Half Day Glimpse",
-        duration: "4 hours",
+        duration: "4 hrs",
         coverage: "Essential Mithila highlights",
         idealFor: "Quick cultural overview",
         price: "NPR 2,000 per person",
@@ -43,7 +43,7 @@ const MithilaCulturalToursDetail = () => {
       },
       {
         name: "Full Day Immersion",
-        duration: "8 hours", 
+        duration: "8 hrs", 
         coverage: "Complete Mithila experience",
         idealFor: "Art lovers, cultural enthusiasts",
         price: "NPR 3,500 per person",

@@ -9,21 +9,21 @@ const MithilaCulturalToursDetail = () => {
   const serviceData = {
     title: "Mithila Cultural Tour Package",
     description: "Immerse yourself in the vibrant colors, rituals and soul of Mithila.",
-    longDescription: "Experience the authentic heritage of Mithila through our comprehensive cultural packages. Ideal for art lovers, cultural tourists, students & researchers, documentary makers, and curious travelers. Choose from half-day glimpses to multi-day cultural retreats and immerse yourself in the soul of Mithila.",
+    longDescription: "Art Lovers | Cultural Tourists | Students & Researchers | Documentary Makers | Curious Travelers",
     highlights: [
-      "🌸 Janaki Mandir Visit & Mithila Welcome with tika, mala, and folk music",
-      "🧵 Janakpur Women Development Center (JWDC) hands-on workshop",
-      "🖼️ Mithila Art Gallery hopping including Sunaina Mithila Art Gallery",
-      "🛕 Cultural Temples Exploration including Rajdevi Mandir and Ram-Janaki Bibaha Mandap",
-      "🪘 Folk Music, Dance & Storytelling with Jhijhiya, Lokasankirtan, Jhari Jhari",
-      "🍲 Traditional Mithila Food Experience with authentic thali",
-      "🛍️ Souvenir Stop at Pethiya Bazaar and local markets",
-      "🧘 Ganga Aarti at Ganga Sagar Pond for spiritual conclusion"
+      "🌸 1. Janaki Mandir Visit & Mithila Welcome - Start the tour with a visit to Janaki Mandir – the heart of Mithila heritage. Receive a Mithila-style welcome with tika, mala, and folk music.",
+      "🧵 2. Janakpur Women Development Center (JWDC) - A living art center where local women create Mithila paintings, pottery, ceramics, and textiles. Participate in a hands-on workshop and learn to paint in the traditional style. 📍 Location: Kuwa, Janakpur",
+      "🖼️ 3. Mithila Art Gallery Hopping - Visit local art galleries: Sunaina Mithila Art Gallery, Mithila Art Center (Parshuram Marg), Mithilani Ghar (Janaki Mandir Marg). Meet the artists and learn about the stories, symbols, and rituals behind each motif.",
+      "🛕 4. Cultural Temples Exploration - Visit culturally significant temples such as: Rajdevi Mandir – site of Dashain rituals, Ram-Janaki Bibaha Mandap – depicting the royal wedding, Dulha Dulhan Mandir – a tribute to divine love, Rangabhoomi (Barhabigha) – where annual reenactments of Ram-Sita's swayamvar take place",
+      "🪘 5. Folk Music, Dance & Storytelling Session - Enjoy an interactive evening of Jhijhiya, Lokasankirtan, Jhari Jhari and Sama-Chakewa. Learn how music and dance embody Mithila's emotions, devotion, and social traditions. Optional: Dress in traditional Maithili attire for cultural photos.",
+      "🍲 6. Traditional Mithila Food Experience - Enjoy an authentic Mithila Thali, including: Bhaat, kadhi bari, taruwa, makhana, tilauri, alu chokha, Lassi, Ghewar, Paan, Fried Fish. Optional cooking demo with a local Mithila family.",
+      "🛍️ 7. Souvenir Stop & Local Bazaars - Visit Pethiya Bazaar and surrounding markets for handmade souvenirs, Maithili jewelry, paintings, and fabrics.",
+      "🧘 8. End with Ganga Aarti at Ganga Sagar Pond - Complete your immersive journey with the mesmerizing Sandhya Aarti, a soulful experience of harmony, devotion, and sound at the holy pond."
     ],
     packageOptions: [
       {
-        name: "Half Day Glimpse",
-        duration: "4 hrs",
+        name: "Half Day Cultural Glimpse",
+        duration: "4 hours",
         coverage: "Essential Mithila highlights",
         idealFor: "Quick cultural overview",
         price: "NPR 2,000 per person",
@@ -42,8 +42,8 @@ const MithilaCulturalToursDetail = () => {
         ]
       },
       {
-        name: "Full Day Immersion",
-        duration: "8 hrs", 
+        name: "Full Day Cultural Immersion",
+        duration: "8 hours", 
         coverage: "Complete Mithila experience",
         idealFor: "Art lovers, cultural enthusiasts",
         price: "NPR 3,500 per person",
@@ -68,7 +68,7 @@ const MithilaCulturalToursDetail = () => {
         ]
       },
       {
-        name: "2 Days / 1 Night",
+        name: "2 Days / 1 Night Cultural Retreat",
         duration: "2D/1N",
         coverage: "Deep cultural immersion",
         idealFor: "Students, researchers, documentary makers",
@@ -97,9 +97,9 @@ const MithilaCulturalToursDetail = () => {
       }
     ],
     addOnServices: [
-      "Art souvenir package",
-      "Cultural performance arrangement", 
-      "Traditional attire rental"
+      "Art souvenir",
+      "Cultural performance", 
+      "Attire rental"
     ],
     pattern: "flower" as const
   };

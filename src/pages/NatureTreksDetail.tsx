@@ -10,77 +10,76 @@ import { Badge } from "@/components/ui/badge";
 
 const NatureTreksDetail = () => {
   return (
-    <div className="min-h-screen font-poppins">
+    <div className="min-h-screen font-poppins bg-mithila-cream">
       <Header />
-      <PatternBackground pattern="peacock" />
       
       {/* Hero Section */}
-      <section className="relative py-20 px-4">
-        <div className="container mx-auto max-w-4xl text-center text-white">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Nature Treks – Hiking Adventures Around Janakpur
-          </h1>
-          <p className="text-xl md:text-2xl font-light italic">
-            "Where sacred stories meet serene landscapes."
-          </p>
+      <section className="relative py-20 px-6 overflow-hidden bg-gradient-to-br from-mithila-indigo to-mithila-green text-white">
+        <PatternBackground pattern="peacock" className="opacity-10" />
+        <div className="container mx-auto relative z-10 pt-16">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 font-hind">Nature Treks – Hiking Adventures Around Janakpur</h1>
+            <p className="text-xl text-mithila-cream italic">
+              "Where sacred stories meet serene landscapes."
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Main Content */}
-      <section className="py-16 px-4 bg-background">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid lg:grid-cols-3 gap-8">
+      {/* Content Section */}
+      <section className="py-16 px-6">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             
-            {/* Main Content Column */}
+            {/* Main Content */}
             <div className="lg:col-span-2 space-y-8">
               
               {/* Duration Options */}
-              <Card className="overflow-hidden">
-                <CardHeader className="bg-primary/10">
-                  <CardTitle className="flex items-center gap-2 text-2xl">
+              <Card className="bg-white border-mithila-cream shadow-lg">
+                <CardHeader>
+                  <CardTitle className="text-mithila-indigo flex items-center">
                     📅 Duration Options:
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="pt-6 space-y-4">
-                  <div className="space-y-3">
-                    <div>
-                      <h4 className="font-semibold text-lg">Half Day Nature Walk – 4 hours</h4>
+                <CardContent>
+                  <div className="space-y-4">
+                    <div className="p-4 bg-mithila-cream rounded-lg">
+                      <p className="text-lg font-semibold text-mithila-indigo">Half Day Nature Walk – 4 hours</p>
                     </div>
-                    <div>
-                      <h4 className="font-semibold text-lg">Full Day Spiritual-Nature Trek – 7–8 hours</h4>
+                    <div className="p-4 bg-mithila-cream rounded-lg">
+                      <p className="text-lg font-semibold text-mithila-indigo">Full Day Spiritual-Nature Trek – 7–8 hours</p>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
               {/* Terrain Type */}
-              <Card className="overflow-hidden">
-                <CardHeader className="bg-secondary/10">
-                  <CardTitle className="flex items-center gap-2 text-2xl">
+              <Card className="bg-white border-mithila-cream shadow-lg">
+                <CardHeader>
+                  <CardTitle className="text-mithila-indigo flex items-center">
                     🌍 Terrain Type:
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="pt-6">
+                <CardContent>
                   <div className="space-y-2">
-                    <p><strong>Easy – Flat, spiritual trails</strong></p>
-                    <p className="text-muted-foreground">Perfect for families, students, senior citizens & first-time trekkers</p>
+                    <p className="text-lg font-semibold text-mithila-indigo">Easy – Flat, spiritual trails</p>
+                    <p className="text-gray-700">Perfect for families, students, senior citizens & first-time trekkers</p>
                   </div>
                 </CardContent>
               </Card>
 
               {/* Trail Highlights */}
-              <Card className="overflow-hidden">
-                <CardHeader className="bg-accent/10">
-                  <CardTitle className="text-2xl">
+              <Card className="bg-white border-mithila-cream shadow-lg">
+                <CardHeader>
+                  <CardTitle className="text-mithila-indigo flex items-center">
                     🧭 Trail Highlights (Based on the book's recommendations)
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="pt-6 space-y-8">
+                <CardContent className="space-y-6">
                   
-                  {/* Trail 1 */}
-                  <div className="border-l-4 border-primary pl-6">
-                    <h4 className="font-bold text-lg mb-3">🌳 1. Mani Mandap Spiritual Walk</h4>
-                    <div className="space-y-2 text-sm">
+                  <div className="border-l-4 border-mithila-red pl-6">
+                    <h3 className="text-lg font-semibold mb-2 text-mithila-indigo">🌳 1. Mani Mandap Spiritual Walk</h3>
+                    <div className="space-y-2 text-gray-700">
                       <p><strong>Distance:</strong> ~4 km from Janaki Mandir (30 min rickshaw + walk)</p>
                       <p><strong>Route:</strong> Janaki Mandir → Agni Kund → Ratna Sagar → Mani Mandap</p>
                       <p><strong>What to see:</strong> Sacred lakes, calm surroundings, symbolic site of Ram-Sita wedding, serene temples</p>
@@ -88,10 +87,9 @@ const NatureTreksDetail = () => {
                     </div>
                   </div>
 
-                  {/* Trail 2 */}
-                  <div className="border-l-4 border-secondary pl-6">
-                    <h4 className="font-bold text-lg mb-3">🌊 2. Pond Trail (Themed: "Sacred Waters of Mithila")</h4>
-                    <div className="space-y-2 text-sm">
+                  <div className="border-l-4 border-mithila-red pl-6">
+                    <h3 className="text-lg font-semibold mb-2 text-mithila-indigo">🌊 2. Pond Trail (Themed: "Sacred Waters of Mithila")</h3>
+                    <div className="space-y-2 text-gray-700">
                       <p><strong>Route:</strong></p>
                       <p className="ml-4">Janaki Mandir → Angarag Sar → Ratna Sagar → Agni Kund → Bihar Kund → Ganga Sagar</p>
                       <p><strong>What to see:</strong> Ponds connected to Sita's daily rituals, Janak's yajna, Ram's treasury</p>
@@ -99,10 +97,9 @@ const NatureTreksDetail = () => {
                     </div>
                   </div>
 
-                  {/* Trail 3 */}
-                  <div className="border-l-4 border-accent pl-6">
-                    <h4 className="font-bold text-lg mb-3">🛕 3. Dhanushadham Exploration Trek</h4>
-                    <div className="space-y-2 text-sm">
+                  <div className="border-l-4 border-mithila-red pl-6">
+                    <h3 className="text-lg font-semibold mb-2 text-mithila-indigo">🛕 3. Dhanushadham Exploration Trek</h3>
+                    <div className="space-y-2 text-gray-700">
                       <p><strong>Distance:</strong> 20 km north of Janakpur</p>
                       <p><strong>Route:</strong> Janakpur → Mithila Bihari Mandir → Dhanush Mandir → Dhanush Sagar → Parashuram Talau</p>
                       <p><strong>Trek Type:</strong> Combination of short drives and 2–3 km walks</p>
@@ -111,10 +108,9 @@ const NatureTreksDetail = () => {
                     </div>
                   </div>
 
-                  {/* Trail 4 */}
-                  <div className="border-l-4 border-primary pl-6">
-                    <h4 className="font-bold text-lg mb-3">🪷 4. Natural Serenity Walk to Nocha Pokhari & Dudhmati River</h4>
-                    <div className="space-y-2 text-sm">
+                  <div className="border-l-4 border-mithila-red pl-6">
+                    <h3 className="text-lg font-semibold mb-2 text-mithila-indigo">🪷 4. Natural Serenity Walk to Nocha Pokhari & Dudhmati River</h3>
+                    <div className="space-y-2 text-gray-700">
                       <p><strong>Distance:</strong> ~5 km south of Janakpur</p>
                       <p><strong>Route:</strong> Janakpur → Rampur (Nocha Pokhari) → Dudhmati River</p>
                       <p><strong>What to see:</strong> Lush green forests, heritage pond, birds, local flora, and river believed to be created from Sita's divine nourishment</p>
@@ -125,12 +121,14 @@ const NatureTreksDetail = () => {
               </Card>
 
               {/* Included Experiences */}
-              <Card className="overflow-hidden">
-                <CardHeader className="bg-primary/10">
-                  <CardTitle className="text-2xl">🧘 Included Experiences:</CardTitle>
+              <Card className="bg-white border-mithila-cream shadow-lg">
+                <CardHeader>
+                  <CardTitle className="text-mithila-indigo flex items-center">
+                    🧘 Included Experiences:
+                  </CardTitle>
                 </CardHeader>
-                <CardContent className="pt-6">
-                  <ul className="space-y-2">
+                <CardContent>
+                  <ul className="space-y-2 text-gray-700">
                     <li>• Guided mindfulness break</li>
                     <li>• Herbal tea at temple garden or lakeside</li>
                     <li>• Cultural storytelling sessions at scenic spots</li>
@@ -141,12 +139,14 @@ const NatureTreksDetail = () => {
               </Card>
 
               {/* Inclusions */}
-              <Card className="overflow-hidden">
-                <CardHeader className="bg-secondary/10">
-                  <CardTitle className="text-2xl">🍱 Inclusions:</CardTitle>
+              <Card className="bg-white border-mithila-cream shadow-lg">
+                <CardHeader>
+                  <CardTitle className="text-mithila-indigo flex items-center">
+                    🍱 Inclusions:
+                  </CardTitle>
                 </CardHeader>
-                <CardContent className="pt-6">
-                  <ul className="space-y-2">
+                <CardContent>
+                  <ul className="space-y-2 text-gray-700">
                     <li>• Local nature guide (English/Hindi/Maithili)</li>
                     <li>• Refreshments and lunch box (for full day)</li>
                     <li>• Entry tickets to key ponds or temples</li>
@@ -157,80 +157,146 @@ const NatureTreksDetail = () => {
                 </CardContent>
               </Card>
 
-              {/* Best Time to Trek */}
-              <Card className="overflow-hidden">
-                <CardHeader className="bg-accent/10">
-                  <CardTitle className="text-2xl">🗓️ Best Time to Trek:</CardTitle>
+              {/* Pricing */}
+              <Card className="bg-white border-mithila-cream shadow-lg">
+                <CardHeader>
+                  <CardTitle className="text-mithila-indigo flex items-center">
+                    💵 Pricing:
+                  </CardTitle>
                 </CardHeader>
-                <CardContent className="pt-6">
-                  <ul className="space-y-2">
-                    <li>• October to December (post-monsoon, clear skies)</li>
-                    <li>• February to April (pleasant mornings and blooming landscapes)</li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              {/* Bonus Tip */}
-              <Card className="overflow-hidden border-2 border-primary">
-                <CardHeader className="bg-primary/20">
-                  <CardTitle className="text-2xl">🌼 Bonus Tip:</CardTitle>
-                </CardHeader>
-                <CardContent className="pt-6">
-                  <p>Join during Janaki Nawami, Bibaha Panchami, or Holi to experience nature, festivity, and faith together!</p>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Sidebar */}
-            <div className="space-y-6">
-              
-              {/* Pricing Card */}
-              <Card className="sticky top-4 overflow-hidden">
-                <CardHeader className="bg-primary text-primary-foreground">
-                  <CardTitle className="text-xl">💵 Pricing:</CardTitle>
-                </CardHeader>
-                <CardContent className="pt-6">
-                  <div className="space-y-4">
-                    <div className="border rounded-lg p-4">
-                      <h4 className="font-semibold">Half Day Nature Walk</h4>
-                      <p className="text-sm text-muted-foreground">4 hrs</p>
-                      <p className="text-lg font-bold text-primary">Rs. 1,800 per person</p>
-                    </div>
-                    
-                    <div className="border rounded-lg p-4">
-                      <h4 className="font-semibold">Full Day Nature Trek</h4>
-                      <p className="text-sm text-muted-foreground">7–8 hrs</p>
-                      <p className="text-lg font-bold text-primary">Rs. 3,500 per person</p>
-                    </div>
-                    
-                    <div className="border rounded-lg p-4 bg-accent/10">
-                      <h4 className="font-semibold">Add-on: Dhanushadham Excursion</h4>
-                      <p className="text-sm text-muted-foreground">+4 hrs</p>
-                      <p className="text-lg font-bold text-primary">Rs. 1,200 extra</p>
-                    </div>
+                <CardContent>
+                  <div className="overflow-x-auto">
+                    <table className="w-full border-collapse border border-gray-300 rounded-lg">
+                      <thead>
+                        <tr className="bg-mithila-cream">
+                          <th className="border border-gray-300 p-4 text-left font-semibold text-mithila-indigo">Package Type</th>
+                          <th className="border border-gray-300 p-4 text-left font-semibold text-mithila-indigo">Duration</th>
+                          <th className="border border-gray-300 p-4 text-left font-semibold text-mithila-indigo">Price (NPR)</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr className="hover:bg-gray-50">
+                          <td className="border border-gray-300 p-4 text-gray-700">Half Day Nature Walk</td>
+                          <td className="border border-gray-300 p-4 text-gray-700">4 hrs</td>
+                          <td className="border border-gray-300 p-4 text-mithila-red font-semibold">Rs. 1,800 per person</td>
+                        </tr>
+                        <tr className="hover:bg-gray-50">
+                          <td className="border border-gray-300 p-4 text-gray-700">Full Day Nature Trek</td>
+                          <td className="border border-gray-300 p-4 text-gray-700">7–8 hrs</td>
+                          <td className="border border-gray-300 p-4 text-mithila-red font-semibold">Rs. 3,500 per person</td>
+                        </tr>
+                        <tr className="hover:bg-gray-50">
+                          <td className="border border-gray-300 p-4 text-gray-700">Add-on: Dhanushadham Excursion</td>
+                          <td className="border border-gray-300 p-4 text-gray-700">+4 hrs</td>
+                          <td className="border border-gray-300 p-4 text-mithila-red font-semibold">Rs. 1,200 extra</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                   
-                  <p className="text-sm text-muted-foreground mt-4">
+                  <p className="text-gray-700 mt-4">
                     Group discounts available. All packages are eco-conscious and support local communities.
                   </p>
                 </CardContent>
               </Card>
 
-              {/* Book Now Card */}
-              <Card className="overflow-hidden">
-                <CardHeader className="bg-secondary text-secondary-foreground">
-                  <CardTitle className="text-xl">📞 Book Now:</CardTitle>
+              {/* Best Time to Trek */}
+              <Card className="bg-white border-mithila-cream shadow-lg">
+                <CardHeader>
+                  <CardTitle className="text-mithila-indigo flex items-center">
+                    🗓️ Best Time to Trek:
+                  </CardTitle>
                 </CardHeader>
-                <CardContent className="pt-6 space-y-4">
-                  <p className="text-sm">
-                    For reservations, customized group tours, and Nepali/English speaking guides, contact your local operator or tourism desk.
-                  </p>
-                  <Button className="w-full" size="lg">
-                    Contact for Booking
-                  </Button>
+                <CardContent>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-mithila-yellow rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700">October to December (post-monsoon, clear skies)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-2 h-2 bg-mithila-yellow rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-700">February to April (pleasant mornings and blooming landscapes)</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              {/* Bonus Tip */}
+              <Card className="bg-white border-mithila-cream shadow-lg">
+                <CardHeader>
+                  <CardTitle className="text-mithila-indigo flex items-center">
+                    🌼 Bonus Tip:
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-700">Join during Janaki Nawami, Bibaha Panchami, or Holi to experience nature, festivity, and faith together!</p>
+                </CardContent>
+              </Card>
+
+              {/* Book Now */}
+              <Card className="bg-white border-mithila-cream shadow-lg">
+                <CardHeader>
+                  <CardTitle className="text-mithila-indigo flex items-center">
+                    📞 Book Now:
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-700 mb-6">For reservations, customized group tours, and Nepali/English speaking guides, contact your local operator or tourism desk.</p>
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <a href="https://wa.me/9779815835343" target="_blank" rel="noopener noreferrer" className="flex-1">
+                      <Button className="w-full bg-mithila-red hover:bg-mithila-red/90 text-white">
+                        Book This Tour
+                      </Button>
+                    </a>
+                    <a href="https://wa.me/9779815835343" target="_blank" rel="noopener noreferrer" className="flex-1">
+                      <Button variant="outline" className="w-full border-mithila-indigo text-mithila-indigo hover:bg-mithila-indigo hover:text-white">
+                        Ask Questions
+                      </Button>
+                    </a>
+                  </div>
+                </CardContent>
+              </Card>
+
+            </div>
+
+            {/* Sidebar */}
+            <div className="space-y-6">
+              <Card className="bg-white border-mithila-cream shadow-lg sticky top-6">
+                <CardHeader>
+                  <CardTitle className="text-mithila-indigo">Quick Booking</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="space-y-3">
+                    <div className="p-4 bg-mithila-cream rounded-lg">
+                      <div className="text-sm text-gray-600 mb-1">Half Day Nature Walk</div>
+                      <div className="text-lg font-bold text-mithila-red">Rs. 1,800 per person</div>
+                    </div>
+                    <div className="p-4 bg-mithila-cream rounded-lg">
+                      <div className="text-sm text-gray-600 mb-1">Full Day Nature Trek</div>
+                      <div className="text-lg font-bold text-mithila-red">Rs. 3,500 per person</div>
+                    </div>
+                    <div className="p-4 bg-mithila-cream rounded-lg">
+                      <div className="text-sm text-gray-600 mb-1">Add-on: Dhanushadham Excursion</div>
+                      <div className="text-lg font-bold text-mithila-red">Rs. 1,200 extra</div>
+                    </div>
+                  </div>
+
+                  <div className="pt-4 space-y-3">
+                    <a href="https://wa.me/9779815835343" target="_blank" rel="noopener noreferrer">
+                      <Button className="w-full bg-mithila-red hover:bg-mithila-red/90 text-white">
+                        Book This Tour
+                      </Button>
+                    </a>
+                    <a href="https://wa.me/9779815835343" target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" className="w-full border-mithila-indigo text-mithila-indigo hover:bg-mithila-indigo hover:text-white">
+                        Ask Questions
+                      </Button>
+                    </a>
+                  </div>
                 </CardContent>
               </Card>
             </div>
+
           </div>
         </div>
       </section>

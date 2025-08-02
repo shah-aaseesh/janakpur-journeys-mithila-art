@@ -166,17 +166,17 @@ const CustomExperiencesDetail = () => {
               <div className="grid md:grid-cols-3 gap-4">
                 <div className="text-center p-4 border rounded-lg">
                   <h4 className="font-semibold text-primary">Half Day</h4>
-                  <p className="text-2xl font-bold text-secondary">Rs. 2,000</p>
+                  <p className="text-2xl font-bold text-primary">Rs. 2,000</p>
                   <p className="text-sm text-muted-foreground">/person</p>
                 </div>
                 <div className="text-center p-4 border rounded-lg">
                   <h4 className="font-semibold text-primary">Full Day</h4>
-                  <p className="text-2xl font-bold text-secondary">Rs. 3,500</p>
+                  <p className="text-2xl font-bold text-primary">Rs. 3,500</p>
                   <p className="text-sm text-muted-foreground">/person</p>
                 </div>
                 <div className="text-center p-4 border rounded-lg">
                   <h4 className="font-semibold text-primary">Multi-Day</h4>
-                  <p className="text-lg font-bold text-secondary">On Request</p>
+                  <p className="text-lg font-bold text-primary">On Request</p>
                   <p className="text-sm text-muted-foreground">(Based on itinerary)</p>
                 </div>
               </div>

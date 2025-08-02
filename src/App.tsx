@@ -11,6 +11,7 @@ import HeritageWalksDetail from "./pages/HeritageWalksDetail";
 import MithilaCulturalToursDetail from "./pages/MithilaCulturalToursDetail";
 import NatureTreksDetail from "./pages/NatureTreksDetail";
 import CustomExperiencesDetail from "./pages/CustomExperiencesDetail";
+import JanakpurDarshanDetail from "./pages/JanakpurDarshanDetail";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/services/janakpur-darshan" element={<JanakpurDarshanDetail />} />
           <Route path="/services/city-tours" element={<CityToursDetail />} />
           <Route path="/services/heritage-walks" element={<HeritageWalksDetail />} />
           <Route path="/services/mithila-cultural-tours" element={<MithilaCulturalToursDetail />} />

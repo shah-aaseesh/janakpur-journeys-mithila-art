@@ -3,12 +3,19 @@ import React from "react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MapPin, Building, Palette, Mountain, Sparkles } from "lucide-react";
+import { MapPin, Building, Palette, Mountain, Sparkles, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import PatternBackground from "./PatternBackground";
 
 const Services: React.FC = () => {
   const services = [
+    {
+      icon: Star,
+      title: "Janakpur Darshan",
+      description: "Complete 3-day spiritual, cultural, and scenic journey through the soul of Mithila.",
+      slug: "janakpur-darshan",
+      pattern: "flower"
+    },
     {
       icon: MapPin,
       title: "City Tours",

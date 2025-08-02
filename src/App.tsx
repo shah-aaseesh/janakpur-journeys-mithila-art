@@ -12,6 +12,7 @@ import MithilaCulturalToursDetail from "./pages/MithilaCulturalToursDetail";
 import NatureTreksDetail from "./pages/NatureTreksDetail";
 import CustomExperiencesDetail from "./pages/CustomExperiencesDetail";
 import JanakpurDarshanDetail from "./pages/JanakpurDarshanDetail";
+import HireGuide from "./pages/HireGuide";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/services/mithila-cultural-tours" element={<MithilaCulturalToursDetail />} />
           <Route path="/services/nature-treks" element={<NatureTreksDetail />} />
           <Route path="/services/custom-experiences" element={<CustomExperiencesDetail />} />
+          <Route path="/hire-guide" element={<HireGuide />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -40,16 +40,10 @@ const Hero: React.FC = () => {
                 Book a Tour
               </a>
               <a
-                href="#about"
+                href="/hire-guide"
                 className="px-6 py-3 border-2 border-mithila-indigo text-mithila-indigo rounded-md font-medium hover:bg-mithila-indigo hover:text-white transition-all transform hover:-translate-y-1"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.querySelector("#about")?.scrollIntoView({
-                    behavior: "smooth",
-                  });
-                }}
               >
-                Learn More
+                Hire a Guide
               </a>
             </div>
           </div>

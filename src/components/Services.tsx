@@ -76,12 +76,12 @@ const Services: React.FC = () => {
                 </CardHeader>
                 <CardContent className="bg-white">
                   <p className="text-gray-700 mb-4 leading-relaxed">{service.description}</p>
-                  <Link to="/hire-guide">
+                  <Link to={`/services/${service.slug}`}>
                     <Button 
                       variant="outline" 
                       className="w-full border-mithila-red text-mithila-red hover:bg-mithila-red hover:text-white transition-colors duration-300"
                     >
-                      Hire a Guide
+                      Learn More
                     </Button>
                   </Link>
                 </CardContent>

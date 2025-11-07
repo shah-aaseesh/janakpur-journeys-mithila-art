@@ -206,7 +206,7 @@ const CityToursDetail = () => {
           "Rickshaw rides through temple routes",
           "Photography at scenic and spiritual locations"
         ]}
-        pattern="peacock" as const
+        pattern="peacock"
       />
     </>
   );

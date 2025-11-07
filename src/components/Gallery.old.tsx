@@ -122,7 +122,7 @@ const Gallery: React.FC = () => {
                         src={image.src}
                         alt={image.alt}
                         className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" 
-                        loading={index < 4 ? "eager" : "lazy"}
+                        loading={idx < 4 ? "eager" : "lazy"}
                       />
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
@@ -135,6 +135,7 @@ const Gallery: React.FC = () => {
                 </div>
               ))}
             </div>
+          </div>
           </div>
 
           {/* Navigation Buttons */}

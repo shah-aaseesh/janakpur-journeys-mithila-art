@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 interface Testimonial {
   id: number;
@@ -16,7 +16,7 @@ const Testimonials: React.FC = () => {
       id: 1,
       name: "Sarah Johnson",
       origin: "USA",
-      comment: "Bikash made our trip to Janakpur truly special. His knowledge of local history and culture is impressive, and he took us to places we would never have found on our own. Highly recommended!",
+      comment: "Travel Janakpur made our trip truly special. Their team's knowledge of local history and culture is impressive, and they took us to places we would never have found on our own. Excellent service!",
       rating: 5,
       image: "/lovable-uploads/e05bc06e-806d-45e2-9af9-9b36309ca9fa.png",
     },
@@ -24,7 +24,7 @@ const Testimonials: React.FC = () => {
       id: 2,
       name: "Rajiv Mehta",
       origin: "India",
-      comment: "As someone interested in the shared cultural heritage between India and Nepal, I found Bikash's insights fascinating. His fluency in multiple languages made communication effortless.",
+      comment: "As someone interested in the shared cultural heritage between India and Nepal, I found the team's insights fascinating. Their multilingual guides made communication effortless throughout our journey.",
       rating: 5,
       image: "/lovable-uploads/ede64044-592e-486b-b2e6-6631a97587aa.png",
     },
@@ -32,7 +32,7 @@ const Testimonials: React.FC = () => {
       id: 3,
       name: "Emma Wilson",
       origin: "UK",
-      comment: "Our day tour with Bikash was the highlight of our Nepal trip. He's friendly, knowledgeable, and adapted the tour to match our interests. The Mithila art experience he arranged was unforgettable.",
+      comment: "Our day tour with Travel Janakpur was the highlight of our Nepal trip. They're professional, knowledgeable, and adapted the tour to match our interests. The Mithila art experience they arranged was unforgettable.",
       rating: 5,
       image: "/lovable-uploads/04510e57-4d7b-44fb-8118-bbbc88b69dee.png",
     },
@@ -40,11 +40,43 @@ const Testimonials: React.FC = () => {
       id: 4,
       name: "Toshiro Yamamoto",
       origin: "Japan",
-      comment: "Bikash is an excellent guide who understands the needs of international travelers. His tours offer a perfect balance of historical information, cultural experiences, and beautiful sights.",
+      comment: "Travel Janakpur is an excellent agency that understands the needs of international travelers. Their tours offer a perfect balance of historical information, cultural experiences, and beautiful sights.",
       rating: 4,
       image: "/lovable-uploads/7cbb66ce-ac24-4462-bf03-efb8b7a488ce.png",
     },
   ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Auto-play carousel with continuous looping
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [testimonials.length]);
+
+  // Get the current visible testimonials (2 at a time)
+  const visibleTestimonials = [
+    testimonials[currentIndex],
+    testimonials[(currentIndex + 1) % testimonials.length],
+  ];
+
+  const goToPrevious = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
+    );
+  };
+
+  const goToNext = () => {
+    setCurrentIndex((prevIndex) => 
+      (prevIndex + 1) % testimonials.length
+    );
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index);
+  };
 
   const renderStars = (rating: number) => {
     return Array(5)
@@ -64,52 +96,83 @@ const Testimonials: React.FC = () => {
       ));
   };
 
-  const handleBookTourClick = () => {
-    window.open("https://wa.me/9779815835343", "_blank");
-  };
-
   return (
-    <section id="testimonials" className="py-20 bg-white">
-      <div className="container mx-auto px-6">
+    <section id="testimonials" className="py-16 sm:py-20 bg-white">
+      <div className="container mx-auto px-4 sm:px-6">
         <h2 className="section-title pb-4">What Travelers Say</h2>
-        <p className="text-center text-gray-700 mb-12 max-w-2xl mx-auto">
-          Hear from past visitors about their experiences exploring Janakpur with my guided tours.
+        <p className="text-center text-gray-700 mb-8 sm:mb-12 max-w-2xl mx-auto text-sm sm:text-base">
+          Hear from past visitors about their experiences exploring Janakpur with our expert guides.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {testimonials.map((testimonial) => (
-            <div
-              key={testimonial.id}
-              className="bg-mithila-cream p-6 rounded-lg shadow-md border-l-4 border-mithila-red animate-fade-in"
-            >
-              <div className="flex items-center mb-4">
-                <div className="flex">{renderStars(testimonial.rating)}</div>
-              </div>
-              <p className="text-gray-700 mb-6 italic">"{testimonial.comment}"</p>
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-mithila-indigo rounded-full flex items-center justify-center text-white font-bold overflow-hidden">
-                  <img 
-                    src={testimonial.image} 
-                    alt={`${testimonial.name}'s experience with Bikash Sah`}
-                    className="w-full h-full object-cover"
-                  />
+        {/* Testimonial Carousel */}
+        <div className="relative max-w-7xl mx-auto">
+          {/* Main Carousel */}
+          <div className="relative overflow-hidden">
+            <div className="flex gap-6 transition-transform duration-500 ease-in-out">
+              {visibleTestimonials.map((testimonial) => (
+                <div
+                  key={testimonial.id}
+                  className="w-1/2 flex-none"
+                >
+                  <div className="bg-mithila-cream p-6 rounded-lg shadow-md border-l-4 border-mithila-red h-full">
+                    <div className="flex items-center mb-4">
+                      <div className="flex">{renderStars(testimonial.rating)}</div>
+                    </div>
+                    <p className="text-gray-700 mb-6 italic text-base leading-relaxed">
+                      "{testimonial.comment}"
+                    </p>
+                    <div className="flex items-center">
+                      <div className="w-12 h-12 bg-mithila-indigo rounded-full overflow-hidden flex-shrink-0">
+                        <img 
+                          src={testimonial.image} 
+                          alt={`${testimonial.name}'s experience with Travel Janakpur`}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="ml-3 min-w-0 flex-1">
+                        <p className="font-bold text-mithila-indigo text-base">{testimonial.name}</p>
+                        <p className="text-sm text-gray-600">from {testimonial.origin}</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div className="ml-3">
-                  <p className="font-bold text-mithila-indigo">{testimonial.name}</p>
-                  <p className="text-sm text-gray-600">from {testimonial.origin}</p>
-                </div>
-              </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </div>
 
-        <div className="mt-12 text-center">
-          <button 
-            className="inline-block px-6 py-3 bg-mithila-green text-white rounded-md font-medium hover:bg-opacity-90 transition-all transform hover:-translate-y-1"
-            onClick={handleBookTourClick}
+          {/* Navigation Buttons */}
+          <button
+            onClick={goToPrevious}
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 bg-white/90 hover:bg-white text-mithila-indigo p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-10"
+            aria-label="Previous testimonial"
           >
-            Book Your Tour Now
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
           </button>
+          <button
+            onClick={goToNext}
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 bg-white/90 hover:bg-white text-mithila-indigo p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-10"
+            aria-label="Next testimonial"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+
+          {/* Dots Indicator */}
+          <div className="flex justify-center mt-8 space-x-2">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  currentIndex === index ? "bg-mithila-red scale-125" : "bg-gray-300 hover:bg-mithila-red/50"
+                }`}
+                aria-label={`Go to testimonial ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

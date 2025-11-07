@@ -54,32 +54,32 @@ const Services: React.FC = () => {
   ];
 
   return (
-    <section id="services" className="py-16 px-6 relative overflow-hidden bg-white">
+    <section id="services" className="py-12 sm:py-16 px-4 sm:px-6 relative overflow-hidden bg-white">
       <PatternBackground pattern="flower" className="opacity-5" />
       <div className="container mx-auto relative z-10">
-        <h2 className="section-title pb-4 mb-12">My Services</h2>
+        <h2 className="section-title pb-4 mb-8 sm:mb-12">Professional Tour Services</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
               <Card key={index} className="group hover:shadow-lg transition-all duration-300 overflow-hidden border-2 border-mithila-cream hover:border-mithila-yellow bg-white">
-                <CardHeader className="relative bg-white">
-                  <div className="flex items-center space-x-3">
-                    <div className="p-2 rounded-lg bg-mithila-cream">
-                      <IconComponent className="w-6 h-6 text-mithila-red" />
+                <CardHeader className="relative bg-white p-4 sm:p-6">
+                  <div className="flex items-start space-x-3">
+                    <div className="p-2 rounded-lg bg-mithila-cream flex-shrink-0">
+                      <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 text-mithila-red" />
                     </div>
-                    <CardTitle className="text-xl font-bold text-mithila-indigo group-hover:text-mithila-red transition-colors duration-300">
+                    <CardTitle className="text-lg sm:text-xl font-bold text-mithila-indigo group-hover:text-mithila-red transition-colors duration-300 leading-tight break-words">
                       {service.title}
                     </CardTitle>
                   </div>
                 </CardHeader>
-                <CardContent className="bg-white">
-                  <p className="text-gray-700 mb-4 leading-relaxed">{service.description}</p>
+                <CardContent className="bg-white p-4 sm:p-6 pt-0">
+                  <p className="text-gray-700 mb-4 leading-relaxed text-sm sm:text-base break-words">{service.description}</p>
                   <Link to={`/services/${service.slug}`}>
                     <Button 
                       variant="outline" 
-                      className="w-full border-mithila-red text-mithila-red hover:bg-mithila-red hover:text-white transition-colors duration-300"
+                      className="w-full border-mithila-red text-mithila-red hover:bg-mithila-red hover:text-white transition-colors duration-300 text-sm sm:text-base py-2 sm:py-3"
                     >
                       Learn More
                     </Button>
@@ -90,14 +90,14 @@ const Services: React.FC = () => {
           })}
         </div>
 
-        <div className="flex justify-center mt-12">
+        <div className="flex justify-center mt-8 sm:mt-12">
           <a
-            href="https://wa.me/9779815835343"
-            className="px-6 py-3 bg-mithila-red text-white rounded-md font-medium hover:bg-opacity-90 transition-all transform hover:-translate-y-1"
+            href="https://api.whatsapp.com/send/?phone=9779766115966&text&type=phone_number&app_absent=0"
+            className="px-4 sm:px-6 py-3 bg-mithila-red text-white rounded-md font-medium hover:bg-opacity-90 transition-all transform hover:-translate-y-1 text-sm sm:text-base"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Book Your Tour Now
+            Get Free Consultation
           </a>
         </div>
       </div>

@@ -12,3 +12,12 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://traveljanakpur.com/sitemap.xml
+
+# Prevent crawling of unnecessary files
+Disallow: /sw.js
+Disallow: /manifest.json
+
+# Performance optimization directives
+Cache-Control: max-age=31536000

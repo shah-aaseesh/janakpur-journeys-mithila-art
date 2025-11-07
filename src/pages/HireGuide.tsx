@@ -53,6 +53,14 @@ const HireGuide: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white font-poppins">
+      <Helmet>
+        <title>Hire Local Guide in Janakpur - Expert Tour Guides | Travel Janakpur</title>
+        <meta 
+          name="description" 
+          content="Hire experienced local guides in Janakpur for personalized tours. Expert knowledge of temples, culture, and hidden gems. Flexible packages from half-day to multi-day tours." 
+        />
+        <meta name="keywords" content="hire guide Janakpur, local tour guide, Janakpur guide service, personal guide Nepal, expert guide hire, cultural guide Janakpur" />
+      </Helmet>
       {/* Header */}
       <header className="bg-white shadow-md sticky top-0 z-50">
         <div className="container mx-auto px-6 py-4">
@@ -178,7 +186,7 @@ const HireGuide: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://wa.me/9779815835343"
+                href="https://api.whatsapp.com/send/?phone=9779766115966&text&type=phone_number&app_absent=0"
                 className="px-8 py-3 bg-mithila-red text-white rounded-md font-medium hover:bg-opacity-90 transition-all transform hover:-translate-y-1"
                 target="_blank"
                 rel="noopener noreferrer"

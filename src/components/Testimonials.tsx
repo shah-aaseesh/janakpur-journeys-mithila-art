@@ -14,11 +14,11 @@ const Testimonials: React.FC = () => {
   const testimonials: Testimonial[] = [
     {
       id: 1,
-      name: "Sarah Johnson",
-      origin: "USA",
-      comment: "Travel Janakpur made our trip truly special. Their team's knowledge of local history and culture is impressive, and they took us to places we would never have found on our own. Excellent service!",
+      name: "Jean Paquet",
+      origin: "Paris, France",
+      comment: "3-day in Janakpur for the Chhath puja festival has been for us a fantastic experience. The perfect services of traveljanakpur, with Bikash as a great guide have made this moment a very special one that we will remember.",
       rating: 5,
-      image: "/lovable-uploads/e05bc06e-806d-45e2-9af9-9b36309ca9fa.png",
+      image: "/Travel Janakpur Customer.jpg",
     },
     {
       id: 2,

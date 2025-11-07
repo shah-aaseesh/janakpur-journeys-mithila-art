@@ -40,6 +40,594 @@ const BlogPost = () => {
   // Sample blog posts data - replace with actual data fetching
   const blogPosts: BlogPost[] = [
     {
+      id: "folk-dances-music-mithila-janakpur",
+      title: "Folk Dances & Music of Mithila — The Cultural Pulse of Janakpur",
+      excerpt: "Discover the vibrant folk dances, devotional songs, and dramatic performances of Mithila region, from the iconic Jhi-Jhiya dance to soulful Lok Sankeertan traditions.",
+      content: `
+        <div class="mb-12">
+          <div class="bg-gradient-to-r from-orange-50 to-red-50 p-6 rounded-lg mb-8">
+            <p class="text-lg leading-relaxed">
+              Janakpur is not just temples and mythology; it is a city that breathes rhythm and movement. 
+              The ancient Mithila region has preserved some of South Asia's oldest folk dances, devotional songs, 
+              and dramatic performances — many dating back to the Treta Yuga.
+            </p>
+            
+            <p class="text-lg leading-relaxed mt-4">
+              If you're traveling to Janakpur, these folk traditions will give you the most authentic window into Maithili life.
+            </p>
+          </div>
+
+          <h2 class="text-3xl font-bold text-mithila-indigo mb-6">Why Mithila Dance & Music Matter</h2>
+          
+          <div class="bg-white p-6 rounded-lg shadow-sm mb-8">
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <span class="text-mithila-yellow text-xl mr-3">•</span>
+                <span class="text-lg">They preserve ancient oral histories</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-mithila-yellow text-xl mr-3">•</span>
+                <span class="text-lg">They carry stories from Ramayana</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-mithila-yellow text-xl mr-3">•</span>
+                <span class="text-lg">They celebrate love, devotion, festivals, and womanhood</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-mithila-yellow text-xl mr-3">•</span>
+                <span class="text-lg">They reflect community values</span>
+              </li>
+            </ul>
+          </div>
+
+          <p class="text-lg leading-relaxed mb-8">
+            Mithila's cultural performances are more than entertainment — they are rituals that keep heritage alive.
+          </p>
+
+          <h2 class="text-3xl font-bold text-mithila-indigo mb-6">1. Jhi-Jhiya Dance — The Fire Dance of Womanhood</h2>
+          
+          <div class="bg-gradient-to-r from-yellow-50 to-amber-50 p-6 rounded-lg mb-8">
+            <p class="text-lg leading-relaxed mb-4">One of Mithila's most iconic dances, performed:</p>
+            
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <span class="text-amber-500 mr-3">•</span>
+                <span class="text-lg">During Dashain</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-amber-500 mr-3">•</span>
+                <span class="text-lg">At night</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-amber-500 mr-3">•</span>
+                <span class="text-lg">By young girls</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-amber-500 mr-3">•</span>
+                <span class="text-lg">Balancing earthen pots with fire lamps on their heads</span>
+              </li>
+            </ul>
+            
+            <p class="text-lg leading-relaxed mt-4">
+              It symbolizes strength, devotion, and protection against evil.
+            </p>
+          </div>
+
+          <h2 class="text-3xl font-bold text-mithila-indigo mb-6">2. Jat-Jatin — The Dance of Love & Reunion</h2>
+          
+          <div class="bg-gradient-to-r from-pink-50 to-rose-50 p-6 rounded-lg mb-8">
+            <p class="text-lg leading-relaxed mb-4">Performed post-monsoon, this is a duet representing:</p>
+            
+            <ul class="grid md:grid-cols-2 gap-4 mb-6">
+              <div class="bg-white border-l-4 border-rose-400 p-4 rounded-lg">
+                <span class="text-lg">Shiva (male)</span>
+              </div>
+              <div class="bg-white border-l-4 border-rose-400 p-4 rounded-lg">
+                <span class="text-lg">Parvati (female)</span>
+              </div>
+            </ul>
+
+            <p class="text-lg leading-relaxed mb-4">Themes include:</p>
+            
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <span class="text-rose-500 mr-3">•</span>
+                <span class="text-lg">Separation</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-rose-500 mr-3">•</span>
+                <span class="text-lg">Longing</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-rose-500 mr-3">•</span>
+                <span class="text-lg">Reunion</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-rose-500 mr-3">•</span>
+                <span class="text-lg">Fulfillment</span>
+              </li>
+            </ul>
+            
+            <p class="text-lg leading-relaxed mt-4">
+              It is visually poetic and deeply emotional.
+            </p>
+          </div>
+
+          <h2 class="text-3xl font-bold text-mithila-indigo mb-6">3. Sama Chakewa — A Sisterhood Ritual Dance</h2>
+          
+          <div class="bg-gradient-to-r from-purple-50 to-violet-50 p-6 rounded-lg mb-8">
+            <p class="text-lg leading-relaxed mb-4">Performed during the Kartik month, this dance celebrates:</p>
+            
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <span class="text-purple-500 mr-3">•</span>
+                <span class="text-lg">Bond between brothers and sisters</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-purple-500 mr-3">•</span>
+                <span class="text-lg">Devotion</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-purple-500 mr-3">•</span>
+                <span class="text-lg">Purity</span>
+              </li>
+            </ul>
+            
+            <p class="text-lg leading-relaxed mt-4">
+              Women hold baskets with dolls, sing Maithili songs, and perform circle dances until midnight.
+            </p>
+          </div>
+
+          <h2 class="text-3xl font-bold text-mithila-indigo mb-6">4. Jharri Dance — The Warrior Rhythm</h2>
+          
+          <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-lg mb-8">
+            <p class="text-lg leading-relaxed mb-4">Performed by men during:</p>
+            
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <span class="text-blue-500 mr-3">•</span>
+                <span class="text-lg">Hanuman Jhand (Hanuman's flag celebration)</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-500 mr-3">•</span>
+                <span class="text-lg">Tajiya (Muslim ritual festival)</span>
+              </li>
+            </ul>
+            
+            <p class="text-lg leading-relaxed mt-4">
+              Men hold sticks and perform energetic rhythmic steps — a symbol of unity and valour.
+            </p>
+          </div>
+
+          <h2 class="text-3xl font-bold text-mithila-indigo mb-6">5. Lok Sankeertan — Mithila's Devotional Music Tradition</h2>
+          
+          <div class="grid gap-6 mb-8">
+            <div class="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-lg">
+              <p class="text-lg leading-relaxed mb-4">Performed with:</p>
+              <ul class="grid md:grid-cols-3 gap-4">
+                <div class="bg-white p-3 rounded-lg text-center">
+                  <span class="text-lg">Harmonium</span>
+                </div>
+                <div class="bg-white p-3 rounded-lg text-center">
+                  <span class="text-lg">Dholak</span>
+                </div>
+                <div class="bg-white p-3 rounded-lg text-center">
+                  <span class="text-lg">Jhal</span>
+                </div>
+                <div class="bg-white p-3 rounded-lg text-center">
+                  <span class="text-lg">Gumti</span>
+                </div>
+                <div class="bg-white p-3 rounded-lg text-center">
+                  <span class="text-lg">Bamboo instruments</span>
+                </div>
+              </ul>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <p class="text-lg leading-relaxed mb-4">Four types exist:</p>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <span class="text-mithila-yellow text-xl mr-3">•</span>
+                  <span class="text-lg">General Sankeertan</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-mithila-yellow text-xl mr-3">•</span>
+                  <span class="text-lg">Jhanki Sankeertan</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-mithila-yellow text-xl mr-3">•</span>
+                  <span class="text-lg">Bishaya Sankeertan</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-mithila-yellow text-xl mr-3">•</span>
+                  <span class="text-lg">Jhanki Vivah Sankeertan (covers Ram–Sita wedding scenes)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="text-lg leading-relaxed mb-8">
+            These songs are spiritual, calming, and central to Janakpur's temple culture.
+          </p>
+
+          <h2 class="text-3xl font-bold text-mithila-indigo mb-6">6. Leela Performances — Ramayana Comes Alive</h2>
+          
+          <div class="bg-gradient-to-r from-orange-50 to-amber-50 p-6 rounded-lg mb-8">
+            <p class="text-lg leading-relaxed mb-4">The most famous is:</p>
+            
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <span class="text-orange-500 mr-3">•</span>
+                <span class="text-lg">Ram Leela — performed for almost a month</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-orange-500 mr-3">•</span>
+                <span class="text-lg">Tells entire Ramayana story</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-orange-500 mr-3">•</span>
+                <span class="text-lg">Performed by local community groups</span>
+              </li>
+            </ul>
+            
+            <p class="text-lg leading-relaxed mt-4">
+              This is one of Janakpur's largest cultural attractions.
+            </p>
+          </div>
+
+          <h2 class="text-3xl font-bold text-mithila-indigo mb-6">Where to Experience These in Janakpur</h2>
+          
+          <div class="bg-gradient-to-r from-teal-50 to-cyan-50 p-6 rounded-lg mb-8">
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <span class="text-teal-500 mr-3">•</span>
+                <span class="text-lg">Janaki Mandir courtyard</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-teal-500 mr-3">•</span>
+                <span class="text-lg">Barhabigha ground</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-teal-500 mr-3">•</span>
+                <span class="text-lg">During Bibaha Panchami</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-teal-500 mr-3">•</span>
+                <span class="text-lg">Chhath Puja celebrations</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-teal-500 mr-3">•</span>
+                <span class="text-lg">Community cultural centers</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-teal-500 mr-3">•</span>
+                <span class="text-lg">Villages around Janakpur (during festivals)</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-gradient-to-r from-mithila-cream to-orange-50 p-6 rounded-lg mb-8">
+            <h2 class="text-3xl font-bold text-mithila-indigo mb-4">Conclusion: Mithila's Rhythm Lives in Janakpur</h2>
+            
+            <p class="text-lg leading-relaxed mb-4">
+              From fiery Jhi-Jhiya dances to the soulful melodies of Lok Sankeertan, Janakpur's cultural 
+              performances reveal the heartbeat of Mithila. If mythology is its soul, then music and dance 
+              are its breath.
+            </p>
+            
+            <p class="text-lg leading-relaxed">
+              A trip to Janakpur is incomplete without experiencing this living cultural heritage.
+            </p>
+          </div>
+        </div>
+      `,
+      author: "Travel Janakpur Team",
+      publishDate: "2025-11-08",
+      readTime: "10 min read",
+      category: "Culture",
+      tags: ["Culture", "Art", "Festivals", "Folk Dance", "Music", "Traditions"],
+      imageUrl: "/Traveljanakpurb4.jpg"
+    },
+    {
+      id: "traditional-mithila-food-janakpur",
+      title: "Traditional Mithila Food You Must Try in Janakpur",
+      excerpt: "Discover the rich culinary heritage of Janakpur with our comprehensive guide to traditional Mithila cuisine, from the iconic Mithila Thali to street food favorites.",
+      content: `
+        <div class="mb-12">
+          <p class="text-xl text-gray-600 mb-8">The Ultimate Food Guide by traveljanakpur.com</p>
+
+          <div class="bg-gradient-to-r from-orange-50 to-red-50 p-6 rounded-lg mb-8">
+            <p class="text-lg leading-relaxed">
+              Janakpur is not only a spiritual center; it is one of Nepal's richest culinary destinations. 
+              Rooted in the ancient Mithila civilization, the food of Janakpur blends tradition, purity, 
+              and vibrant flavors that reflect centuries-old customs. From temple offerings to festive dishes, 
+              Mithila cuisine celebrates freshness, culture, and family.
+            </p>
+          </div>
+
+          <p class="text-lg leading-relaxed mb-8">
+            If you're planning your Janakpur travel itinerary, make sure to dedicate a full day just for 
+            Mithila food exploration — because this cuisine is a world of its own.
+          </p>
+
+          <h2 class="text-3xl font-bold text-mithila-indigo mb-6">What Makes Mithila Cuisine Unique?</h2>
+
+          <p class="text-lg leading-relaxed mb-6">Mithila food reflects three pillars of the culture:</p>
+
+          <div class="grid gap-4 mb-8">
+            <div class="bg-gradient-to-r from-yellow-50 to-orange-50 p-5 rounded-lg">
+              <h4 class="font-bold text-mithila-indigo text-xl mb-2">1. Purity</h4>
+              <p class="text-gray-700">Ingredients like makhana, curd, and rice are considered auspicious.</p>
+            </div>
+
+            <div class="bg-gradient-to-r from-green-50 to-teal-50 p-5 rounded-lg">
+              <h4 class="font-bold text-mithila-indigo text-xl mb-2">2. Simplicity with Depth</h4>
+              <p class="text-gray-700">Minimal spices, bold flavors.</p>
+            </div>
+
+            <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-5 rounded-lg">
+              <h4 class="font-bold text-mithila-indigo text-xl mb-2">3. Cultural Symbolism</h4>
+              <p class="text-gray-700">Foods are tied to rituals, seasons, and festivals like Chhath, Sama-Chakewa, and Bibaha Panchami.</p>
+            </div>
+          </div>
+
+          <h2 class="text-3xl font-bold text-mithila-indigo mb-6">1. Mithila Thali — The Complete Cultural Feast</h2>
+
+          <p class="text-lg leading-relaxed mb-6">A proper Mithila Thali includes:</p>
+          
+          <div class="bg-white p-6 rounded-lg shadow-sm mb-8">
+            <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <li class="flex items-start">
+                <span class="text-mithila-yellow text-xl mr-3">•</span>
+                <span class="text-lg">Plain rice</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-mithila-yellow text-xl mr-3">•</span>
+                <span class="text-lg">Kadhi bari (chickpea dumplings in yogurt sauce)</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-mithila-yellow text-xl mr-3">•</span>
+                <span class="text-lg">Alu chokha (mashed potato with mustard oil)</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-mithila-yellow text-xl mr-3">•</span>
+                <span class="text-lg">Taruwa (vegetable fritters)</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-mithila-yellow text-xl mr-3">•</span>
+                <span class="text-lg">Tilauri</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-mithila-yellow text-xl mr-3">•</span>
+                <span class="text-lg">Fulauri</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-mithila-yellow text-xl mr-3">•</span>
+                <span class="text-lg">Seasonal vegetables</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-mithila-yellow text-xl mr-3">•</span>
+                <span class="text-lg">Dal</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-mithila-yellow text-xl mr-3">•</span>
+                <span class="text-lg">Achar</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-mithila-yellow text-xl mr-3">•</span>
+                <span class="text-lg">Ghee</span>
+              </li>
+            </ul>
+          </div>
+
+          <p class="text-lg leading-relaxed mb-8">Each element represents balance, prosperity, and cultural identity.</p>
+
+          <h2 class="text-3xl font-bold text-mithila-indigo mb-6">2. Litti — A Crunchy Staple You Can't Miss</h2>
+
+          <p class="text-lg leading-relaxed mb-6">Litti is a fried or roasted dough ball stuffed with:</p>
+          
+          <div class="bg-gradient-to-r from-orange-50 to-red-50 p-6 rounded-lg mb-8">
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <span class="text-orange-500 mr-3">•</span>
+                <span class="text-lg">Roasted gram flour</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-orange-500 mr-3">•</span>
+                <span class="text-lg">Mustard oil</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-orange-500 mr-3">•</span>
+                <span class="text-lg">Garlic</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-orange-500 mr-3">•</span>
+                <span class="text-lg">Ajwain</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-orange-500 mr-3">•</span>
+                <span class="text-lg">Spices</span>
+              </li>
+            </ul>
+          </div>
+
+          <p class="text-lg leading-relaxed mb-8">Traditionally served with yogurt or chokha, it is one of the most popular street foods of Janakpur.</p>
+
+          <h2 class="text-3xl font-bold text-mithila-indigo mb-6">3. Ghevar — The Festival Sweet of Mithila</h2>
+
+          <p class="text-lg leading-relaxed mb-6">A honeycomb-style sweet made from:</p>
+          
+          <div class="bg-gradient-to-r from-yellow-50 to-amber-50 p-6 rounded-lg mb-8">
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <span class="text-amber-500 mr-3">•</span>
+                <span class="text-lg">Flour</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-amber-500 mr-3">•</span>
+                <span class="text-lg">Sugar syrup</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-amber-500 mr-3">•</span>
+                <span class="text-lg">Ghee</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-amber-500 mr-3">•</span>
+                <span class="text-lg">Khoya</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-amber-500 mr-3">•</span>
+                <span class="text-lg">Dry fruits</span>
+              </li>
+            </ul>
+          </div>
+
+          <p class="text-lg leading-relaxed mb-8">Ghevar is usually enjoyed during Teej, Holi, and weddings.</p>
+
+          <h2 class="text-3xl font-bold text-mithila-indigo mb-6">4. Makhana — The Soul of Mithila</h2>
+
+          <p class="text-lg leading-relaxed mb-6">Makhana (fox nuts) represents purity and is used in:</p>
+          
+          <div class="bg-white p-6 rounded-lg shadow-sm mb-8">
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <span class="text-mithila-yellow text-xl mr-3">•</span>
+                <span class="text-lg">Prasad</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-mithila-yellow text-xl mr-3">•</span>
+                <span class="text-lg">Sweet dishes</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-mithila-yellow text-xl mr-3">•</span>
+                <span class="text-lg">Makhana kheer</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-mithila-yellow text-xl mr-3">•</span>
+                <span class="text-lg">Temple offerings</span>
+              </li>
+            </ul>
+          </div>
+
+          <p class="text-lg leading-relaxed mb-8">
+            It also symbolizes fertility and prosperity — making it a favourite among newlyweds.
+          </p>
+
+          <h2 class="text-3xl font-bold text-mithila-indigo mb-6">5. Fried Fish — A Celebration Food</h2>
+
+          <div class="bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-lg mb-8">
+            <p class="text-lg leading-relaxed mb-4">"Machh, Paan, Makhana" is the soul of Mithila food culture.</p>
+
+            <p class="text-lg leading-relaxed mb-4">
+              Janakpur's ponds ensure a daily supply of fresh fish. Fried fish is served on:
+            </p>
+            
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <span class="text-blue-500 mr-3">•</span>
+                <span class="text-lg">Weddings</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-500 mr-3">•</span>
+                <span class="text-lg">Festivals</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-500 mr-3">•</span>
+                <span class="text-lg">Honoring guests</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-500 mr-3">•</span>
+                <span class="text-lg">Ritual occasions</span>
+              </li>
+            </ul>
+          </div>
+
+          <p class="text-lg leading-relaxed mb-8">
+            You will find stalls around Ganga Sagar, Janaki Mandir, and Pidari Chowk selling fresh, 
+            crispy fried fish.
+          </p>
+
+          <h2 class="text-3xl font-bold text-mithila-indigo mb-6">6. Meetha Paan — The Cultural Token of Respect</h2>
+
+          <div class="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-lg mb-8">
+            <p class="text-lg leading-relaxed mb-4">
+              In Mithila, offering paan is a gesture of love and hospitality.
+            </p>
+
+            <p class="text-lg leading-relaxed mb-4">From simple paan to meetha paan loaded with:</p>
+            
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <span class="text-emerald-500 mr-3">•</span>
+                <span class="text-lg">Sweet gulkand</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-500 mr-3">•</span>
+                <span class="text-lg">Fennel</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-500 mr-3">•</span>
+                <span class="text-lg">Tutti-frutti</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-500 mr-3">•</span>
+                <span class="text-lg">Coconut</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-500 mr-3">•</span>
+                <span class="text-lg">Cardamom</span>
+              </li>
+            </ul>
+          </div>
+
+          <p class="text-lg leading-relaxed mb-8">It is a must-try cultural ritual.</p>
+
+          <h2 class="text-3xl font-bold text-mithila-indigo mb-6">Best Places to Try Mithila Food in Janakpur</h2>
+
+          <div class="bg-gradient-to-r from-purple-50 to-indigo-50 p-6 rounded-lg mb-8">
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <span class="text-purple-500 mr-3">•</span>
+                <span class="text-lg">Local eateries near Janaki Mandir</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-purple-500 mr-3">•</span>
+                <span class="text-lg">Pidari Chowk street food lane</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-purple-500 mr-3">•</span>
+                <span class="text-lg">Mithila Thali restaurants near Ramananda Chowk</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-purple-500 mr-3">•</span>
+                <span class="text-lg">Food stalls around Ganga Sagar</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-purple-500 mr-3">•</span>
+                <span class="text-lg">Traditional kitchens during festivals (if you're lucky!)</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-gradient-to-r from-mithila-cream to-orange-50 p-6 rounded-lg mb-8">
+            <h2 class="text-3xl font-bold text-mithila-indigo mb-4">Conclusion: Taste Janakpur to Understand Mithila</h2>
+
+            <p class="text-lg leading-relaxed">
+              To truly experience Janakpur's culture, you must taste its food. Each dish carries history, 
+              stories, prayers, and tradition. Whether you're enjoying a crunchy litti, a warm Mithila thali, 
+              or sweet ghevar, you're experiencing the heart of Mithila heritage.
+            </p>
+          </div>
+        </div>
+      `,
+      author: "Travel Janakpur Team",
+      publishDate: "2025-11-08",
+      readTime: "12 min read",
+      category: "Food & Culture",
+      tags: ["Food Guide", "Mithila Cuisine", "Culture", "Local Food", "Traditions"],
+      imageUrl: "/Travel Janakpur 12.jpg"
+    },
+    {
       id: "how-to-visit-janakpur-nepal-2025",
       title: "How to Visit Janakpur, Nepal? (Complete Travel Guide 2025)",
       excerpt: "Planning a trip to Janakpur, Nepal? Learn how to reach Janakpur by air, road, and train, the best time to visit, and the must-see attractions in this spiritual city.",

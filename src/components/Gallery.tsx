@@ -20,7 +20,7 @@ const Gallery: React.FC = () => {
     { id: 10, src: "/gallery/WhatsApp Image 2025-06-24 at 15.48.56_fee5fc37.jpg", alt: "Mithila painting workshop" },
     { id: 11, src: "/gallery/WhatsApp Image 2025-06-24 at 15.48.57_c5afb367.jpg", alt: "Sacred pond and temple grounds" },
     { id: 12, src: "/gallery/WhatsApp Image 2025-06-24 at 15.48.57_e872a22f.jpg", alt: "Cultural heritage tour experience" },
-    { id: 13, src: "/gallery/WhatsApp Image 2025-06-24 at 15.48.00_c20da5cb.jpg", alt: "Tourists exploring Janakpur" },
+    { id: 13, src: "/gallery/WhatsApp Image 2025-06-24 at 15.49.00_c20da5cb.jpg", alt: "Tourists exploring Janakpur" },
     { id: 14, src: "/gallery/WhatsApp Image 2025-06-24 at 15.49.02_64607464.jpg", alt: "Local guide with visitors" },
     { id: 15, src: "/gallery/WhatsApp Image 2025-06-24 at 15.49.03_7592727e.jpg", alt: "Traditional architecture and design" },
   ];
@@ -29,30 +29,45 @@ const Gallery: React.FC = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImage, setCurrentImage] = useState<GalleryImage | null>(null);
 
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % (images.length - 2));
-    }, 3000);
+      if (!isTransitioning) {
+        setCurrentIndex((prevIndex) => {
+          const nextIndex = prevIndex + 1;
+          return nextIndex >= images.length - 2 ? 0 : nextIndex;
+        });
+      }
+    }, 5000); // Increased interval for smoother transitions
     return () => clearInterval(interval);
-  }, [images.length]);
+  }, [images.length, isTransitioning]);
 
-  // Get the current set of 3 visible images
-  const visibleImages = [
-    images[currentIndex],
-    images[(currentIndex + 1) % images.length],
-    images[(currentIndex + 2) % images.length]
-  ];
+  // Handle transition start/end
+  useEffect(() => {
+    setIsTransitioning(true);
+    const timer = setTimeout(() => {
+      setIsTransitioning(false);
+    }, 500); // Match this with the CSS transition duration
+    return () => clearTimeout(timer);
+  }, [currentIndex]);
 
   const goToPrevious = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex === 0 ? images.length - 3 : prevIndex - 1
-    );
+    if (!isTransitioning) {
+      setCurrentIndex((prevIndex) => {
+        const newIndex = prevIndex - 1;
+        return newIndex < 0 ? images.length - 3 : newIndex;
+      });
+    }
   };
 
   const goToNext = () => {
-    setCurrentIndex((prevIndex) => 
-      prevIndex >= images.length - 3 ? 0 : prevIndex + 1
-    );
+    if (!isTransitioning) {
+      setCurrentIndex((prevIndex) => {
+        const newIndex = prevIndex + 1;
+        return newIndex > images.length - 3 ? 0 : newIndex;
+      });
+    }
   };
 
   const goToSlide = (index: number) => {
@@ -96,8 +111,11 @@ const Gallery: React.FC = () => {
         <div className="relative max-w-7xl mx-auto">
           <div className="relative overflow-hidden rounded-xl shadow-xl bg-white p-4">
             {/* Visible slides container */}
-            <div className="flex gap-4">
-              {visibleImages.map((image) => (
+            <div 
+              className="flex gap-4 transition-transform duration-500 ease-out"
+              style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
+            >
+              {images.map((image) => (
                 <div key={image.id} className="w-1/3 flex-none">
                   <div 
                     className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer"

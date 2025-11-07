@@ -26,6 +26,30 @@ const Blog = () => {
   // Sample blog posts - you can replace these with real content later
   const blogPosts: BlogPost[] = [
     {
+      id: "folk-dances-music-mithila-janakpur",
+      title: "Folk Dances & Music of Mithila — The Cultural Pulse of Janakpur",
+      excerpt: "Discover the vibrant folk dances, devotional songs, and dramatic performances of Mithila region, from the iconic Jhi-Jhiya dance to soulful Lok Sankeertan traditions.",
+      content: "",
+      author: "Travel Janakpur Team",
+      publishDate: "2025-11-08",
+      readTime: "10 min read",
+      category: "Culture",
+      tags: ["Culture", "Art", "Festivals", "Folk Dance", "Music", "Traditions"],
+      imageUrl: "/Traveljanakpurb4.jpg"
+    },
+    {
+      id: "traditional-mithila-food-janakpur",
+      title: "Traditional Mithila Food You Must Try in Janakpur",
+      excerpt: "Discover the rich culinary heritage of Janakpur with our comprehensive guide to traditional Mithila cuisine, from the iconic Mithila Thali to street food favorites.",
+      content: "",
+      author: "Travel Janakpur Team",
+      publishDate: "2025-11-08",
+      readTime: "12 min read",
+      category: "Food",
+      tags: ["Food Guide", "Mithila Cuisine", "Culture", "Local Food", "Traditions"],
+      imageUrl: "/Travel Janakpur 12.jpg"
+    },
+    {
       id: "how-to-visit-janakpur-nepal-2025",
       title: "How to Visit Janakpur, Nepal? (Complete Travel Guide 2025)",
       excerpt: "Planning a trip to Janakpur, Nepal? Learn how to reach Janakpur by air, road, and train, the best time to visit, and the must-see attractions in this spiritual city.",
@@ -51,12 +75,7 @@ const Blog = () => {
     }
   ];
 
-  const categories = ["All", "Travel Guide", "Culture", "Art", "Travel Tips", "Festivals", "Food"];
-  const [selectedCategory, setSelectedCategory] = React.useState("All");
-
-  const filteredPosts = selectedCategory === "All" 
-    ? blogPosts 
-    : blogPosts.filter(post => post.category === selectedCategory);
+  // No category filtering - show all posts directly
 
   return (
     <div className="min-h-screen font-poppins bg-mithila-cream">
@@ -91,27 +110,9 @@ const Blog = () => {
       {/* Main Content */}
       <section className="py-12 sm:py-16">
         <div className="container mx-auto px-4 sm:px-6">
-          {/* Category Filter */}
-          <div className="flex flex-wrap gap-2 mb-8 justify-center">
-            {categories.map((category) => (
-              <Button
-                key={category}
-                variant={selectedCategory === category ? "default" : "outline"}
-                className={`${
-                  selectedCategory === category
-                    ? "bg-mithila-red hover:bg-mithila-red/90 text-white"
-                    : "border-mithila-red text-mithila-red hover:bg-mithila-red hover:text-white"
-                }`}
-                onClick={() => setSelectedCategory(category)}
-              >
-                {category}
-              </Button>
-            ))}
-          </div>
-
           {/* Blog Posts Grid */}
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {filteredPosts.map((post) => (
+            {blogPosts.map((post) => (
               <Card key={post.id} className="bg-white border-2 border-mithila-cream shadow-lg hover:shadow-xl transition-shadow group">
                 {post.imageUrl && (
                   <div className="aspect-video overflow-hidden rounded-t-lg">
@@ -173,17 +174,7 @@ const Blog = () => {
             ))}
           </div>
 
-          {/* Empty State */}
-          {filteredPosts.length === 0 && (
-            <div className="text-center py-12">
-              <h3 className="text-xl font-semibold text-mithila-indigo mb-2">
-                No articles found
-              </h3>
-              <p className="text-gray-600">
-                No articles available in the selected category yet.
-              </p>
-            </div>
-          )}
+
         </div>
       </section>
 

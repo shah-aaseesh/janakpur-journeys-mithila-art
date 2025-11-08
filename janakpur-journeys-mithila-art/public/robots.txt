@@ -1,0 +1,34 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+
+# Search engine specific rules
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+# Sitemap location
+Sitemap: https://traveljanakpur.com/sitemap.xml
+Allow: /
+
+User-agent: *
+Allow: /
+
+Sitemap: https://traveljanakpur.com/sitemap.xml
+
+# Prevent crawling of unnecessary files
+Disallow: /sw.js
+Disallow: /manifest.json
+
+# Performance optimization directives
+Cache-Control: max-age=31536000

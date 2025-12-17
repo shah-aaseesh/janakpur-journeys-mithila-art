@@ -26,6 +26,18 @@ const Blog = () => {
   // Sample blog posts - you can replace these with real content later
   const blogPosts: BlogPost[] = [
     {
+      id: "vivaha-panchami-janakpur-travel-guide",
+      title: "Vivaha Panchami in Janakpur: Complete Travel Guide, Rituals & Best Time to Visit",
+      excerpt: "Experience the divine wedding celebration of Lord Rama and Goddess Sita at Janakpur. Discover rituals, festival events, travel tips, and the best time to witness Vivaha Panchami.",
+      content: "",
+      author: "Travel Janakpur Team",
+      publishDate: "2025-11-18",
+      readTime: "12 min read",
+      category: "Festival",
+      tags: ["Festival", "Vivaha Panchami", "Rituals", "Culture", "Pilgrimage", "Janakpur"],
+      imageUrl: "/blog/vivaha-panchami-janakpur.jpg"
+    },
+    {
       id: "folk-dances-music-mithila-janakpur",
       title: "Folk Dances & Music of Mithila — The Cultural Pulse of Janakpur",
       excerpt: "Discover the vibrant folk dances, devotional songs, and dramatic performances of Mithila region, from the iconic Jhi-Jhiya dance to soulful Lok Sankeertan traditions.",

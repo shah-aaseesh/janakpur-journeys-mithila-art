@@ -40,6 +40,183 @@ const BlogPost = () => {
   // Sample blog posts data - replace with actual data fetching
   const blogPosts: BlogPost[] = [
     {
+      id: "vivaha-panchami-janakpur-travel-guide",
+      title: "Vivaha Panchami in Janakpur: Complete Travel Guide, Rituals & Best Time to Visit",
+      excerpt: "Experience the divine wedding celebration of Lord Rama and Goddess Sita at Janakpur. Discover rituals, festival events, travel tips, and the best time to witness Vivaha Panchami.",
+      content: `
+        <div class="mb-12">
+          <div class="bg-gradient-to-r from-orange-50 to-red-50 p-6 rounded-lg mb-8">
+            <p class="text-lg leading-relaxed">
+              Vivaha Panchami, also known as Bibaha Panchami, is the sacred festival that celebrates the divine wedding of Lord Rama and Goddess Sita—believed to have taken place in the ancient kingdom of Mithila, at Janakpur. It falls on the fifth day (Panchami) of the waxing moon (Shukla Paksha) in the Hindu month of Margashirsha (often November-December).
+            </p>
+          </div>
+
+          <h2 class="text-3xl font-bold text-mithila-indigo mb-6">Why Janakpur is the Heart of the Celebration</h2>
+          
+          <div class="bg-white p-6 rounded-lg shadow-sm mb-8">
+            <p class="text-lg leading-relaxed mb-4">Janakpur (also called Janakpurdham) is central to anyone planning to travel Janakpur during the festival:</p>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <span class="text-mithila-yellow text-xl mr-3">•</span>
+                <span class="text-lg">It is regarded as the capital of the ancient Videha kingdom and the birthplace of Sita, where the wedding of Rama and Sita took place.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-mithila-yellow text-xl mr-3">•</span>
+                <span class="text-lg">The magnificent Janaki Mandir—dedicated to Goddess Sita—is one of the main venues during Vivaha Panchami, drawing massive crowds every year.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-mithila-yellow text-xl mr-3">•</span>
+                <span class="text-lg">Local traditions and rituals give this festival a distinct regional flavour, blending mythology, culture and live enactments.</span>
+              </li>
+            </ul>
+          </div>
+
+          <h2 class="text-3xl font-bold text-mithila-indigo mb-6">The Festival Experience: What Happens & When</h2>
+          
+          <p class="text-lg leading-relaxed mb-6">The celebrations in Janakpur span several days, making it an ideal time to visit Janakpur and explore what to do in Janakpur. Each day features specific rituals, cultural events and processions.</p>
+
+          <div class="overflow-x-auto mb-8">
+            <table class="w-full bg-white rounded-lg shadow-sm">
+              <thead class="bg-mithila-cream">
+                <tr>
+                  <th class="px-4 py-3 text-left font-bold text-mithila-indigo">Day</th>
+                  <th class="px-4 py-3 text-left font-bold text-mithila-indigo">Event</th>
+                  <th class="px-4 py-3 text-left font-bold text-mithila-indigo">Highlights</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b">
+                  <td class="px-4 py-3">Early days</td>
+                  <td class="px-4 py-3">Nagar Darshan (city tour)</td>
+                  <td class="px-4 py-3">A ceremonial tour of Janakpur city to welcome the festival.</td>
+                </tr>
+                <tr class="border-b bg-orange-50">
+                  <td class="px-4 py-3">Mid-days</td>
+                  <td class="px-4 py-3">Phulbari Leela (flower garland event)</td>
+                  <td class="px-4 py-3">The city is decorated; flower garlands and ritual-procession elements.</td>
+                </tr>
+                <tr class="border-b">
+                  <td class="px-4 py-3">Middle day</td>
+                  <td class="px-4 py-3">Dhanush Yagya / Bow-Breaking Ceremony</td>
+                  <td class="px-4 py-3">Re-enactment of Rama breaking the bow to win Sita's hand.</td>
+                </tr>
+                <tr class="border-b bg-orange-50">
+                  <td class="px-4 py-3">Late-day</td>
+                  <td class="px-4 py-3">Tilakotsav & Swayamvar-style events</td>
+                  <td class="px-4 py-3">Ceremonial tilak (marking) and the formal "marriage".</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3">Final day</td>
+                  <td class="px-4 py-3">Vivaha Panchami Wedding Ritual</td>
+                  <td class="px-4 py-3">The core wedding ceremony of Rama and Sita in ritual form, followed by a grand procession (Baraat) arriving at Janakpur.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 class="text-3xl font-bold text-mithila-indigo mb-6">Rituals, Symbolism & Cultural Significance</h2>
+          
+          <div class="bg-gradient-to-r from-yellow-50 to-amber-50 p-6 rounded-lg mb-8">
+            <p class="text-lg leading-relaxed mb-4">
+              The legend recounts that King Janaka of Mithila held a swayamvara for Sita, where the suitor had to string and break the bow of Shiva. Rama succeeded, thereby marrying Sita.
+            </p>
+            <p class="text-lg leading-relaxed mb-4">
+              On Vivaha Panchami, devotees replicate that wedding in temples: idols of Rama and Sita are adorned, and offerings of fruits, sweets and sacred items are made.
+            </p>
+            <p class="text-lg leading-relaxed">
+              The event carries deep cultural symbolism: the union of duty (dharma) and devotion (bhakti), the ideal of married life, and reverence for cultural roots.
+            </p>
+          </div>
+
+          <h2 class="text-3xl font-bold text-mithila-indigo mb-6">How to Make the Most of Your Visit During Vivaha Panchami</h2>
+          
+          <p class="text-lg leading-relaxed mb-4">Here are practical tips for travellers planning to experience travel Janakpur during the festival:</p>
+
+          <div class="grid md:grid-cols-2 gap-4 mb-8">
+            <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-5 rounded-lg">
+              <h4 class="font-bold text-mithila-indigo text-xl mb-2">Book Early</h4>
+              <p class="text-gray-700">Accommodation fills up quickly during the festival. Reserve your stay well in advance.</p>
+            </div>
+            <div class="bg-gradient-to-r from-green-50 to-teal-50 p-5 rounded-lg">
+              <h4 class="font-bold text-mithila-indigo text-xl mb-2">Expect Crowds</h4>
+              <p class="text-gray-700">The festival attracts thousands of devotees. Plan for large gatherings at temples.</p>
+            </div>
+            <div class="bg-gradient-to-r from-purple-50 to-violet-50 p-5 rounded-lg">
+              <h4 class="font-bold text-mithila-indigo text-xl mb-2">Combine with Sightseeing</h4>
+              <p class="text-gray-700">Visit other attractions like Ram Mandir, Dhanush Sagar, and local ponds.</p>
+            </div>
+            <div class="bg-gradient-to-r from-pink-50 to-rose-50 p-5 rounded-lg">
+              <h4 class="font-bold text-mithila-indigo text-xl mb-2">Plan for Processions</h4>
+              <p class="text-gray-700">Roads may be closed during processions. Allow extra travel time.</p>
+            </div>
+            <div class="bg-gradient-to-r from-orange-50 to-amber-50 p-5 rounded-lg">
+              <h4 class="font-bold text-mithila-indigo text-xl mb-2">Dress & Behaviour</h4>
+              <p class="text-gray-700">Modest clothing recommended; follow temple guidelines and customs.</p>
+            </div>
+            <div class="bg-gradient-to-r from-teal-50 to-cyan-50 p-5 rounded-lg">
+              <h4 class="font-bold text-mithila-indigo text-xl mb-2">Capture Respectfully</h4>
+              <p class="text-gray-700">Photography is allowed in most areas, but be respectful during rituals.</p>
+            </div>
+          </div>
+
+          <h2 class="text-3xl font-bold text-mithila-indigo mb-6">Why Visit During Vivaha Panchami?</h2>
+          
+          <div class="bg-gradient-to-r from-mithila-cream to-orange-50 p-6 rounded-lg mb-8">
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <span class="text-mithila-red text-xl mr-3">✦</span>
+                <div>
+                  <span class="font-bold text-mithila-indigo">Living Culture:</span>
+                  <span class="text-lg"> Witness one of Nepal's most vibrant cultural celebrations with authentic traditions.</span>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-mithila-red text-xl mr-3">✦</span>
+                <div>
+                  <span class="font-bold text-mithila-indigo">Spiritual Depth:</span>
+                  <span class="text-lg"> Experience the divine energy as thousands gather to celebrate the sacred union.</span>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-mithila-red text-xl mr-3">✦</span>
+                <div>
+                  <span class="font-bold text-mithila-indigo">Visual & Emotional Grandeur:</span>
+                  <span class="text-lg"> The illuminated Janaki Mandir, colorful processions, and devotional atmosphere create unforgettable memories.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <h2 class="text-3xl font-bold text-mithila-indigo mb-6">Best Time to Visit & Key Dates</h2>
+          
+          <div class="bg-white p-6 rounded-lg shadow-sm mb-8">
+            <p class="text-lg leading-relaxed mb-4">
+              For 2025, Vivaha Panchami is projected as <strong>November 25</strong>, depending on the local lunar calendar.
+            </p>
+            <p class="text-lg leading-relaxed">
+              The entire festival period spans approximately one week before and after the main day, with various cultural events and processions throughout.
+            </p>
+          </div>
+
+          <div class="bg-gradient-to-r from-mithila-cream to-yellow-50 p-6 rounded-lg mb-8 border-l-4 border-mithila-red">
+            <h2 class="text-3xl font-bold text-mithila-indigo mb-4">Conclusion</h2>
+            <p class="text-lg leading-relaxed mb-4">
+              Vivaha Panchami is not just a festival — it is a living re-enactment of one of Hinduism's most beloved stories. For travelers seeking cultural immersion, spiritual depth, and visual grandeur, there is no better time to visit Janakpur.
+            </p>
+            <p class="text-lg leading-relaxed">
+              Plan your trip, book early, and prepare to witness the divine wedding of Rama and Sita in the very land where legend says it first took place.
+            </p>
+          </div>
+        </div>
+      `,
+      author: "Travel Janakpur Team",
+      publishDate: "2025-11-18",
+      readTime: "12 min read",
+      category: "Festival",
+      tags: ["Festival", "Vivaha Panchami", "Rituals", "Culture", "Pilgrimage", "Janakpur"],
+      imageUrl: "/blog/vivaha-panchami-janakpur.jpg"
+    },
+    {
       id: "folk-dances-music-mithila-janakpur",
       title: "Folk Dances & Music of Mithila — The Cultural Pulse of Janakpur",
       excerpt: "Discover the vibrant folk dances, devotional songs, and dramatic performances of Mithila region, from the iconic Jhi-Jhiya dance to soulful Lok Sankeertan traditions.",

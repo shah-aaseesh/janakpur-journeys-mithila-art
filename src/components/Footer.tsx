@@ -15,8 +15,8 @@ const Footer: React.FC = () => {
           element.scrollIntoView({ behavior: "smooth" });
         }
       } else {
-        // Navigate to home with hash
-        navigate(`/#${section}`);
+        // Navigate to home with hash - use window.location for proper hash handling
+        window.location.href = `/#${section}`;
       }
     } else {
       navigate(path);

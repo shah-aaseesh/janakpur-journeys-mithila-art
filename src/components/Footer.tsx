@@ -7,23 +7,19 @@ const Footer: React.FC = () => {
   const location = useLocation();
 
   const handleNavigation = (path: string, section?: string) => {
-    if (location.pathname !== path) {
+    if (section) {
+      if (location.pathname === "/") {
+        // Already on home page, just scroll
+        const element = document.querySelector(`#${section}`);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      } else {
+        // Navigate to home with hash
+        navigate(`/#${section}`);
+      }
+    } else {
       navigate(path);
-      // If we're navigating to a section on the home page, scroll to it after navigation
-      if (path === "/" && section) {
-        setTimeout(() => {
-          const element = document.querySelector(`#${section}`);
-          if (element) {
-            element.scrollIntoView({ behavior: "smooth" });
-          }
-        }, 100);
-      }
-    } else if (section) {
-      // If we're already on the home page, just scroll to the section
-      const element = document.querySelector(`#${section}`);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
     }
   };
 

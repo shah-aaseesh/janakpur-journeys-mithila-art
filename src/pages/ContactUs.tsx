@@ -61,7 +61,7 @@ const ContactUs: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                    <p className="text-foreground/70">info@traveljanakpur.com</p>
+                    <a href="mailto:traveljanakpur0@gmail.com" className="text-foreground/70 hover:text-mithila-red">traveljanakpur0@gmail.com</a>
                     <p className="text-sm text-muted-foreground">We respond within 24 hours</p>
                   </div>
                 </div>

@@ -49,16 +49,10 @@ const Header: React.FC = () => {
       const sectionId = href.substring(2);
       
       if (!isHomePage) {
-        // If on detail page or blog page, navigate to home first, then scroll to section
-        navigate("/");
-        // Use setTimeout to ensure navigation completes before scrolling
-        setTimeout(() => {
-          document.getElementById(sectionId)?.scrollIntoView({
-            behavior: "smooth",
-          });
-        }, 100);
+        // Navigate to home with section in state
+        navigate("/", { state: { scrollTo: sectionId } });
       } else {
-        // If on home page, scroll to section
+        // If on home page, scroll to section directly
         document.getElementById(sectionId)?.scrollIntoView({
           behavior: "smooth",
         });

@@ -10,6 +10,10 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import AboutUs from "./pages/AboutUs";
+import ContactUs from "./pages/ContactUs";
+import TermsConditions from "./pages/TermsConditions";
 
 // Lazy load service detail pages for better performance
 const JanakpurDarshanDetail = lazy(() => import("./pages/JanakpurDarshanDetail"));
@@ -68,6 +72,10 @@ const App = () => (
                 <HireGuide />
               </Suspense>
             } />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/contact-us" element={<ContactUs />} />
+            <Route path="/terms-conditions" element={<TermsConditions />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

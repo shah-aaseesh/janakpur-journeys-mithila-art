@@ -121,11 +121,39 @@ const Footer: React.FC = () => {
                 </svg>
               </a>
             </div>
-            <p className="text-sm text-gray-300">
+            <p className="text-sm text-gray-300 mb-4">
               EST. 2021 | Licensed Travel Agency
               <br />
               Serving 1000+ satisfied customers annually
             </p>
+            
+            {/* Legal Links for AdSense */}
+            <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
+              <button 
+                onClick={() => navigate("/privacy-policy")}
+                className="text-gray-300 hover:text-mithila-yellow transition-colors"
+              >
+                Privacy Policy
+              </button>
+              <button 
+                onClick={() => navigate("/about-us")}
+                className="text-gray-300 hover:text-mithila-yellow transition-colors"
+              >
+                About Us
+              </button>
+              <button 
+                onClick={() => navigate("/contact-us")}
+                className="text-gray-300 hover:text-mithila-yellow transition-colors"
+              >
+                Contact Us
+              </button>
+              <button 
+                onClick={() => navigate("/terms-conditions")}
+                className="text-gray-300 hover:text-mithila-yellow transition-colors"
+              >
+                Terms & Conditions
+              </button>
+            </div>
           </div>
         </div>
         

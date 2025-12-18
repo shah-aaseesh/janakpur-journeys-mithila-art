@@ -48,7 +48,7 @@ const Header: React.FC = () => {
     } else if (href.startsWith("/#")) {
       const sectionId = href.substring(2);
       
-      if (isDetailPage || isBlogPage) {
+      if (!isHomePage) {
         // If on detail page or blog page, navigate to home first, then scroll to section
         navigate("/");
         // Use setTimeout to ensure navigation completes before scrolling

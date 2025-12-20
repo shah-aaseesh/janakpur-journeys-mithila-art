@@ -149,6 +149,14 @@ const Footer: React.FC = () => {
               >
                 Terms & Conditions
               </button>
+              <a 
+                href="/sitemap.xml"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-mithila-yellow transition-colors"
+              >
+                Sitemap
+              </a>
             </div>
           </div>
         </div>

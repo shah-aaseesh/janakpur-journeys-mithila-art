@@ -126,25 +126,25 @@ const Footer: React.FC = () => {
             {/* Legal Links for AdSense */}
             <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
               <button 
-                onClick={() => navigate("/privacy-policy")}
+                onClick={() => { navigate("/privacy-policy"); window.scrollTo(0, 0); }}
                 className="text-gray-300 hover:text-mithila-yellow transition-colors"
               >
                 Privacy Policy
               </button>
               <button 
-                onClick={() => navigate("/about-us")}
+                onClick={() => { navigate("/about-us"); window.scrollTo(0, 0); }}
                 className="text-gray-300 hover:text-mithila-yellow transition-colors"
               >
                 About Us
               </button>
               <button 
-                onClick={() => navigate("/contact-us")}
+                onClick={() => { navigate("/contact-us"); window.scrollTo(0, 0); }}
                 className="text-gray-300 hover:text-mithila-yellow transition-colors"
               >
                 Contact Us
               </button>
               <button 
-                onClick={() => navigate("/terms-conditions")}
+                onClick={() => { navigate("/terms-conditions"); window.scrollTo(0, 0); }}
                 className="text-gray-300 hover:text-mithila-yellow transition-colors"
               >
                 Terms & Conditions

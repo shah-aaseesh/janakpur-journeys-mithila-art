@@ -1,15 +1,22 @@
+# robots.txt for Travel Janakpur
+# https://traveljanakpur.com
+
 User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /admin/
 Disallow: /private/
+Disallow: /*.json$
+Disallow: /sw.js
 
 # Search engine specific rules
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 2
 
 User-agent: Twitterbot
 Allow: /
@@ -17,18 +24,14 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
 # Sitemap location
 Sitemap: https://traveljanakpur.com/sitemap.xml
-Allow: /
 
-User-agent: *
-Allow: /
-
-Sitemap: https://traveljanakpur.com/sitemap.xml
-
-# Prevent crawling of unnecessary files
-Disallow: /sw.js
-Disallow: /manifest.json
-
-# Performance optimization directives
-Cache-Control: max-age=31536000
+# Host
+Host: https://traveljanakpur.com

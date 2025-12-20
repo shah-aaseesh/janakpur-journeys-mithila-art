@@ -1,75 +1,44 @@
 // Service Worker for Travel Janakpur
-// Version 2 - Network-first strategy for better freshness
-const CACHE_NAME = 'travel-janakpur-v2';
+// Version 3 - Minimal caching, forces fresh content
+const CACHE_NAME = 'travel-janakpur-v3';
 
-// Only cache essential static assets
-const STATIC_ASSETS = [
-  '/favicon-32x32.png',
-  '/hero-image-optimized.webp',
-  '/janaki-mandir-optimized.webp'
-];
-
-// Install - cache minimal static assets
+// Install - skip waiting to activate immediately
 self.addEventListener('install', (event) => {
+  // Clear ALL caches on install
   event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then((cache) => cache.addAll(STATIC_ASSETS))
-      .then(() => self.skipWaiting()) // Activate immediately
+    caches.keys().then((cacheNames) => {
+      return Promise.all(cacheNames.map((name) => caches.delete(name)));
+    }).then(() => self.skipWaiting())
   );
 });
 
-// Activate - clean up old caches
+// Activate - take control of all clients immediately
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames
-          .filter((name) => name !== CACHE_NAME)
-          .map((name) => caches.delete(name))
-      );
-    }).then(() => self.clients.claim()) // Take control immediately
+      return Promise.all(cacheNames.map((name) => caches.delete(name)));
+    }).then(() => self.clients.claim())
+      .then(() => {
+        // Force reload all open tabs
+        self.clients.matchAll({ type: 'window' }).then((clients) => {
+          clients.forEach((client) => client.navigate(client.url));
+        });
+      })
   );
 });
 
-// Fetch - Network-first for HTML, stale-while-revalidate for assets
+// Fetch - Always network first, no caching
 self.addEventListener('fetch', (event) => {
-  const { request } = event;
-  const url = new URL(request.url);
-
-  // Skip non-GET requests
-  if (request.method !== 'GET') return;
-
-  // Skip external requests
-  if (url.origin !== location.origin) return;
-
-  // HTML pages - always fetch from network
-  if (request.mode === 'navigate' || request.headers.get('accept')?.includes('text/html')) {
+  // Always fetch from network, no caching
+  if (event.request.method === 'GET') {
     event.respondWith(
-      fetch(request)
-        .catch(() => caches.match('/index.html'))
-    );
-    return;
-  }
-
-  // Static assets (images, fonts) - stale-while-revalidate
-  if (request.destination === 'image' || request.destination === 'font') {
-    event.respondWith(
-      caches.open(CACHE_NAME).then((cache) => {
-        return cache.match(request).then((cachedResponse) => {
-          const fetchPromise = fetch(request).then((networkResponse) => {
-            if (networkResponse.ok) {
-              cache.put(request, networkResponse.clone());
-            }
-            return networkResponse;
-          }).catch(() => cachedResponse);
-
-          return cachedResponse || fetchPromise;
-        });
+      fetch(event.request).catch(() => {
+        // Only fallback to cache for navigation requests
+        if (event.request.mode === 'navigate') {
+          return caches.match('/index.html');
+        }
+        return new Response('Offline', { status: 503 });
       })
     );
-    return;
   }
-
-  // Everything else - network only (JS, CSS get fresh versions)
-  event.respondWith(fetch(request));
 });

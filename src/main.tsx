@@ -4,28 +4,34 @@ import './index.css'
 
 createRoot(document.getElementById("root")!).render(<App />);
 
-// Register service worker with force update
+// Register service worker with auto-update
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', async () => {
     try {
-      // Unregister old service workers and clear caches
-      const registrations = await navigator.serviceWorker.getRegistrations();
-      for (const registration of registrations) {
-        await registration.unregister();
-      }
-      
-      // Clear all caches
-      const cacheNames = await caches.keys();
-      await Promise.all(cacheNames.map((name) => caches.delete(name)));
-      
-      // Register fresh service worker
       const registration = await navigator.serviceWorker.register('/sw.js', { updateViaCache: 'none' });
-      console.log('SW registered fresh: ', registration);
       
-      // Force update check
+      // Check for updates immediately and every 30 seconds
       registration.update();
+      setInterval(() => registration.update(), 30000);
+      
+      // Listen for new service worker and reload when ready
+      registration.addEventListener('updatefound', () => {
+        const newWorker = registration.installing;
+        if (newWorker) {
+          newWorker.addEventListener('statechange', () => {
+            if (newWorker.state === 'activated' && navigator.serviceWorker.controller) {
+              window.location.reload();
+            }
+          });
+        }
+      });
+      
+      // Handle controller change (new SW took over)
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        window.location.reload();
+      });
     } catch (error) {
-      console.log('SW handling: ', error);
+      console.log('SW error: ', error);
     }
   });
 }

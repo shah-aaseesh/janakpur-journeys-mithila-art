@@ -39,6 +39,42 @@ const NatureTreksDetail = () => {
           content="Experience the natural beauty of Janakpur with guided nature treks. Walk along the Dudhmati River, explore villages, enjoy boat rides, and connect with the region's natural heritage." 
         />
         <meta name="keywords" content="nature treks Janakpur, river walks, village trails, boat rides, eco tourism, outdoor activities, nature tours Nepal" />
+        <link rel="canonical" href="https://traveljanakpur.com/services/nature-treks" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://traveljanakpur.com/services/nature-treks" />
+        <meta property="og:title" content="Nature Treks Janakpur - River Walks & Village Trails | Travel Janakpur" />
+        <meta property="og:description" content="Experience the natural beauty of Janakpur with guided nature treks. Walk along the Dudhmati River, explore villages, enjoy boat rides." />
+        <meta property="og:site_name" content="Travel Janakpur" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Nature Treks Janakpur - River Walks & Village Trails | Travel Janakpur" />
+        <meta name="twitter:description" content="Experience the natural beauty of Janakpur with guided nature treks. Walk along the Dudhmati River, explore villages." />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "TouristTrip",
+            "name": "Nature Treks Janakpur",
+            "description": "Discover the serene natural beauty surrounding Janakpur through guided nature treks along the Dudhmati River and nearby villages.",
+            "touristType": ["Nature lovers", "Photographers", "Casual hikers"],
+            "provider": {
+              "@type": "TravelAgency",
+              "name": "Travel Janakpur",
+              "url": "https://traveljanakpur.com"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "2500",
+              "priceCurrency": "NPR",
+              "availability": "https://schema.org/InStock"
+            }
+          })}
+        </script>
       </Helmet>
       <ServiceDetail {...serviceData} />
     </>

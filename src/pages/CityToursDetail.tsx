@@ -25,6 +25,42 @@ const CityToursDetail = () => {
           content="Explore vibrant Janakpur city tours. Visit bustling markets, modern attractions, local neighborhoods, and experience authentic daily life with expert local guides." 
         />
         <meta name="keywords" content="Janakpur city tours, local markets, urban exploration, street tours, modern Janakpur, local life tours, guided city walks" />
+        <link rel="canonical" href="https://traveljanakpur.com/services/city-tours" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://traveljanakpur.com/services/city-tours" />
+        <meta property="og:title" content="City Tours Janakpur - Modern Markets & Local Life | Travel Janakpur" />
+        <meta property="og:description" content="Explore vibrant Janakpur city tours. Visit bustling markets, modern attractions, local neighborhoods, and experience authentic daily life with expert local guides." />
+        <meta property="og:site_name" content="Travel Janakpur" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="City Tours Janakpur - Modern Markets & Local Life | Travel Janakpur" />
+        <meta name="twitter:description" content="Explore vibrant Janakpur city tours. Visit bustling markets, modern attractions, local neighborhoods, and experience authentic daily life with expert local guides." />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "TouristTrip",
+            "name": "Janakpurdham City Tour Package",
+            "description": "Explore the sacred city of Janakpur with comprehensive tour packages covering major spiritual and heritage sites.",
+            "touristType": ["Pilgrims", "Cultural explorers", "Art lovers"],
+            "provider": {
+              "@type": "TravelAgency",
+              "name": "Travel Janakpur",
+              "url": "https://traveljanakpur.com"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "2500",
+              "priceCurrency": "NPR",
+              "availability": "https://schema.org/InStock"
+            }
+          })}
+        </script>
       </Helmet>
       <ServiceDetail
         title="Janakpurdham City Tour Package"

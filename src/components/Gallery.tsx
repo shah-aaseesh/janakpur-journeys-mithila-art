@@ -50,27 +50,37 @@ const Gallery: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImage, setCurrentImage] = useState<GalleryImage | null>(null);
-
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check for mobile viewport
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const slidesPerView = isMobile ? 1 : 3;
+  const maxIndex = images.length - slidesPerView;
 
   useEffect(() => {
     const interval = setInterval(() => {
       if (!isTransitioning) {
         setCurrentIndex((prevIndex) => {
           const nextIndex = prevIndex + 1;
-          return nextIndex >= images.length - 2 ? 0 : nextIndex;
+          return nextIndex > maxIndex ? 0 : nextIndex;
         });
       }
-    }, 5000); // Increased interval for smoother transitions
+    }, 5000);
     return () => clearInterval(interval);
-  }, [images.length, isTransitioning]);
+  }, [maxIndex, isTransitioning]);
 
-  // Handle transition start/end
   useEffect(() => {
     setIsTransitioning(true);
     const timer = setTimeout(() => {
       setIsTransitioning(false);
-    }, 500); // Match this with the CSS transition duration
+    }, 500);
     return () => clearTimeout(timer);
   }, [currentIndex]);
 
@@ -78,7 +88,7 @@ const Gallery: React.FC = () => {
     if (!isTransitioning) {
       setCurrentIndex((prevIndex) => {
         const newIndex = prevIndex - 1;
-        return newIndex < 0 ? images.length - 3 : newIndex;
+        return newIndex < 0 ? maxIndex : newIndex;
       });
     }
   };
@@ -87,7 +97,7 @@ const Gallery: React.FC = () => {
     if (!isTransitioning) {
       setCurrentIndex((prevIndex) => {
         const newIndex = prevIndex + 1;
-        return newIndex > images.length - 3 ? 0 : newIndex;
+        return newIndex > maxIndex ? 0 : newIndex;
       });
     }
   };
@@ -131,10 +141,10 @@ const Gallery: React.FC = () => {
             {/* Visible slides container */}
             <div 
               className="flex gap-4 transition-transform duration-500 ease-out"
-              style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
+              style={{ transform: `translateX(-${currentIndex * (100 / slidesPerView)}%)` }}
             >
               {images.map((image) => (
-                <div key={image.id} className="w-1/3 flex-none">
+                <div key={image.id} className={`${isMobile ? 'w-full' : 'w-1/3'} flex-none`}>
                   <div 
                     className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer"
                     onClick={() => openLightbox(image)}

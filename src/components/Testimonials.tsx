@@ -47,6 +47,15 @@ const Testimonials: React.FC = () => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check for mobile viewport
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   // Auto-play carousel with continuous looping
   useEffect(() => {
@@ -56,11 +65,10 @@ const Testimonials: React.FC = () => {
     return () => clearInterval(interval);
   }, [testimonials.length]);
 
-  // Get the current visible testimonials (2 at a time)
-  const visibleTestimonials = [
-    testimonials[currentIndex],
-    testimonials[(currentIndex + 1) % testimonials.length],
-  ];
+  // Get the current visible testimonials (1 on mobile, 2 on desktop)
+  const visibleTestimonials = isMobile 
+    ? [testimonials[currentIndex]]
+    : [testimonials[currentIndex], testimonials[(currentIndex + 1) % testimonials.length]];
 
   const goToPrevious = () => {
     setCurrentIndex((prevIndex) => 
@@ -112,7 +120,7 @@ const Testimonials: React.FC = () => {
               {visibleTestimonials.map((testimonial) => (
                 <div
                   key={testimonial.id}
-                  className="w-1/2 flex-none"
+                  className={`${isMobile ? 'w-full' : 'w-1/2'} flex-none`}
                 >
                   <div className="bg-mithila-cream p-6 rounded-lg shadow-md border-l-4 border-mithila-red h-full">
                     <div className="flex items-center mb-4">

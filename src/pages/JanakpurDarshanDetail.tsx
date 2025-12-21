@@ -31,6 +31,50 @@ const JanakpurDarshanDetail = () => {
           content="Experience the complete 3-day Janakpur Darshan tour. Visit Janaki Mandir, sacred ponds, Mithila art centers, and immerse in spiritual culture. Book your pilgrimage journey with expert guides." 
         />
         <meta name="keywords" content="Janakpur Darshan, Janaki Mandir tour, spiritual tours Nepal, pilgrimage tours, 3-day Janakpur tour, religious tourism, Mithila culture tour" />
+        <link rel="canonical" href="https://traveljanakpur.com/services/janakpur-darshan" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://traveljanakpur.com/services/janakpur-darshan" />
+        <meta property="og:title" content="Janakpur Darshan - 3-Day Spiritual & Cultural Tour | Travel Janakpur" />
+        <meta property="og:description" content="Experience the complete 3-day Janakpur Darshan tour. Visit Janaki Mandir, sacred ponds, Mithila art centers, and immerse in spiritual culture." />
+        <meta property="og:site_name" content="Travel Janakpur" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Janakpur Darshan - 3-Day Spiritual & Cultural Tour | Travel Janakpur" />
+        <meta name="twitter:description" content="Experience the complete 3-day Janakpur Darshan tour. Visit Janaki Mandir, sacred ponds, Mithila art centers." />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "TouristTrip",
+            "name": "Janakpur Darshan – All-In-One Experience",
+            "description": "A complete spiritual, cultural, and scenic journey through the soul of Mithila. 2 Nights / 3 Days tour.",
+            "touristType": ["Pilgrimage seekers", "Art & culture enthusiasts", "Spiritual couples", "Heritage lovers"],
+            "itinerary": {
+              "@type": "ItemList",
+              "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Day 1: Janakpur Spiritual Trail"},
+                {"@type": "ListItem", "position": 2, "name": "Day 2: Mithila Culture & Nature Walk"},
+                {"@type": "ListItem", "position": 3, "name": "Day 3: Sacred Outskirts Tour"}
+              ]
+            },
+            "provider": {
+              "@type": "TravelAgency",
+              "name": "Travel Janakpur",
+              "url": "https://traveljanakpur.com"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "9000",
+              "priceCurrency": "NPR",
+              "availability": "https://schema.org/InStock"
+            }
+          })}
+        </script>
       </Helmet>
       <Header />
       

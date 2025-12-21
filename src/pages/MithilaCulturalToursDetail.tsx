@@ -40,6 +40,42 @@ const MithilaCulturalToursDetail = () => {
           content="Immerse in authentic Mithila culture with art workshops, traditional cuisine, folk performances, and local artisan visits. Experience the vibrant heritage of Janakpur region." 
         />
         <meta name="keywords" content="Mithila culture tours, Madhubani art, traditional cuisine, folk performances, cultural immersion, Janakpur culture, local artisans" />
+        <link rel="canonical" href="https://traveljanakpur.com/services/mithila-cultural-tours" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://traveljanakpur.com/services/mithila-cultural-tours" />
+        <meta property="og:title" content="Mithila Cultural Tours - Art, Food & Traditions | Travel Janakpur" />
+        <meta property="og:description" content="Immerse in authentic Mithila culture with art workshops, traditional cuisine, folk performances, and local artisan visits. Experience the vibrant heritage of Janakpur region." />
+        <meta property="og:site_name" content="Travel Janakpur" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Mithila Cultural Tours - Art, Food & Traditions | Travel Janakpur" />
+        <meta name="twitter:description" content="Immerse in authentic Mithila culture with art workshops, traditional cuisine, folk performances, and local artisan visits." />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "TouristTrip",
+            "name": "Mithila Cultural Tours",
+            "description": "Experience the vibrant cultural heritage of Mithila through immersive cultural tours including art workshops, folk performances, and local cuisine.",
+            "touristType": ["Culture enthusiasts", "Art lovers", "Families"],
+            "provider": {
+              "@type": "TravelAgency",
+              "name": "Travel Janakpur",
+              "url": "https://traveljanakpur.com"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "4500",
+              "priceCurrency": "NPR",
+              "availability": "https://schema.org/InStock"
+            }
+          })}
+        </script>
       </Helmet>
       <ServiceDetail {...serviceData} />
     </>

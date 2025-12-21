@@ -40,6 +40,42 @@ const HeritageWalksDetail = () => {
           content="Explore Janakpur's rich heritage with guided walks through ancient temples, historical sites, and sacred monuments. Discover centuries-old architecture and spiritual stories." 
         />
         <meta name="keywords" content="heritage walks Janakpur, temple tours, historical sites, ancient architecture, cultural heritage, guided walks Nepal" />
+        <link rel="canonical" href="https://traveljanakpur.com/services/heritage-walks" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://traveljanakpur.com/services/heritage-walks" />
+        <meta property="og:title" content="Heritage Walks Janakpur - Ancient Temples & History Tours | Travel Janakpur" />
+        <meta property="og:description" content="Explore Janakpur's rich heritage with guided walks through ancient temples, historical sites, and sacred monuments. Discover centuries-old architecture and spiritual stories." />
+        <meta property="og:site_name" content="Travel Janakpur" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Heritage Walks Janakpur - Ancient Temples & History Tours | Travel Janakpur" />
+        <meta name="twitter:description" content="Explore Janakpur's rich heritage with guided walks through ancient temples, historical sites, and sacred monuments." />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "TouristTrip",
+            "name": "Heritage Walks Janakpur",
+            "description": "Step into the pages of history as we guide you through Janakpur's ancient temples, sacred sites, and historical monuments.",
+            "touristType": ["History enthusiasts", "Pilgrims"],
+            "provider": {
+              "@type": "TravelAgency",
+              "name": "Travel Janakpur",
+              "url": "https://traveljanakpur.com"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "3500",
+              "priceCurrency": "NPR",
+              "availability": "https://schema.org/InStock"
+            }
+          })}
+        </script>
       </Helmet>
       <ServiceDetail {...serviceData} />
     </>

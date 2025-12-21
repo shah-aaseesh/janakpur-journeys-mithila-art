@@ -37,6 +37,44 @@ const CustomExperiencesDetail = () => {
           content="Create your perfect Janakpur experience with fully customizable tours. Personalized itineraries designed around your specific interests, whether cultural, spiritual, or adventure-focused." 
         />
         <meta name="keywords" content="custom tours Janakpur, personalized travel, private tours, tailored experiences, bespoke travel, customized itineraries" />
+        <link rel="canonical" href="https://traveljanakpur.com/services/custom-experiences" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://traveljanakpur.com/services/custom-experiences" />
+        <meta property="og:title" content="Custom Experiences Janakpur - Personalized Tours | Travel Janakpur" />
+        <meta property="og:description" content="Create your perfect Janakpur experience with fully customizable tours. Personalized itineraries designed around your specific interests." />
+        <meta property="og:site_name" content="Travel Janakpur" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Custom Experiences Janakpur - Personalized Tours | Travel Janakpur" />
+        <meta name="twitter:description" content="Create your perfect Janakpur experience with fully customizable tours. Personalized itineraries designed around your specific interests." />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "TouristTrip",
+            "name": "Custom Experiences Janakpur",
+            "description": "Create your perfect Janakpur experience with fully customizable tours designed around your specific interests and needs.",
+            "touristType": ["Special interests", "Private groups", "Unique requirements"],
+            "provider": {
+              "@type": "TravelAgency",
+              "name": "Travel Janakpur",
+              "url": "https://traveljanakpur.com"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "priceCurrency": "NPR"
+              },
+              "availability": "https://schema.org/InStock"
+            }
+          })}
+        </script>
       </Helmet>
       <ServiceDetail {...serviceData} />
     </>
